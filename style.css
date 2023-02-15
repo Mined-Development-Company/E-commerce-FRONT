@@ -7,6 +7,13 @@
 :root {
   --font_nunito: "Nunito", sans-serif;
   --font_pt_sans: "PT Sans", sans-serif;
+  --branco: #ffffff;
+  --black: #000000;
+  --preto-cinza: #2c2c2c;
+  --cinza: #c8c8c8;
+  --preto-laranja: #0d0800;
+  --laranja: #ff9900;
+  --laranja-claro: #fff0da;
 }
 
 #headerTitle {
@@ -101,3 +108,80 @@
   line-height: 22px;
   color: #ff9900;
 }
+/* Carrosel rotativo banner */
+
+/* Estilização do botão de navegação */
+.slides input {
+  display: none;
+}
+.navegation {
+  position: absolute;
+
+  bottom: 20px;
+
+  left: 50%;
+  transform: translate(-50%);
+
+  display: flex;
+
+  z-index: 2;
+}
+.bar {
+  width: 66px;
+  height: 15px;
+
+  margin: 15px;
+
+  border: 3px solid var(--laranja-claro);
+  border-radius: 15px;
+  cursor: pointer;
+}
+.bar:hover {
+  background-color: var(--laranja-claro);
+}
+/* Fim da estilização do botão de navegação */
+.content {
+  width: 100vw;
+  height: 520px;
+
+  display: flex;
+
+  overflow: hidden;
+
+  position: absolute;
+  z-index: 1;
+}
+/* orgazação de imagens dentro do objeto e transição */
+.slides {
+  display: flex;
+}
+.slide img {
+  width: 100vw;
+  height: 100%;
+
+  object-fit: cover;
+}
+.slide {
+  transition: 0.4s;
+}
+/* Fim da orgazação de imagens dentro do objeto e transição */
+
+/* Movimentação do slide, usando o input para alterar a margin das imagens, mandando elas para a esquerda e assim criando o efeito de movimentação*/
+#slide1:checked ~ .s1 {
+  margin-left: 0;
+}
+#slide2:checked ~ .s1 {
+  margin-left: -100vw;
+}
+#slide3:checked ~ .s1 {
+  margin: -100vw;
+}
+#slide4:checked ~ .s1 {
+  margin-left: -300vw;
+}
+#slide5:checked ~ .s1 {
+  margin: -200vw;
+}
+/* Fim  da movimentação do slide */
+
+/* Fim do Carrosel rotativo banner */
