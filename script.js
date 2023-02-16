@@ -12,3 +12,14 @@ function nextImage() {
   document.getElementById("slide" + count).checked = true;
 }
 // fim da rotatividade automatica
+document.getElementById("slide");
+
+let countValue = document.querySelectorAll("[data-valor]");
+
+countValue.forEach((countValue) => {
+  countValue.addEventListener("click", atualizarValor);
+});
+
+function atualizarValor(e) {
+  count = e.countValue;
+}
