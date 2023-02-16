@@ -1,14 +1,14 @@
 // Rotatividade automatica
-let count = 1;
+let count = 1
 setInterval(function () {
-  nextImage();
-}, 5000);
+  nextImage()
+}, 5000)
 
 function nextImage() {
-  count++;
+  count++
   if (count > 4) {
-    count = 1;
+    count = 1
   }
-  document.getElementById("slide" + count).checked = true;
+  document.getElementById("slide" + count).checked = true
 }
 // fim da rotatividade automatica

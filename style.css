@@ -32,6 +32,7 @@
   align-items: center;
   width: 100%;
   height: 81px;
+  padding: 0 10%;
   border-bottom: 1px solid #c8c8c8;
 }
 
@@ -148,7 +149,7 @@
 
   overflow: hidden;
 
-  position: absolute;
+  position: relative;
   z-index: 1;
 }
 /* orgazação de imagens dentro do objeto e transição */
@@ -185,3 +186,40 @@
 /* Fim  da movimentação do slide */
 
 /* Fim do Carrosel rotativo banner */
+
+/* Inicio dos cards informativos */
+
+.infoCards {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: auto;
+  margin: 3% 0;
+}
+
+.infoCard {
+  border: 1px solid var(--cinza);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font_pt_sans);
+  border-radius: 10px;
+  width: 285.62px;
+  height: 196.66px;
+  gap: 30px 0;
+  text-align: center;
+}
+
+.infoTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font_nunito);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 103.9%;
+  gap: 10px;
+}
