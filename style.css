@@ -35,6 +35,7 @@ body {
   align-items: center;
   height: 81px;
   border-bottom: 1px solid #c8c8c8;
+  position: relative;
 }
 
 .searchArea {
@@ -48,7 +49,7 @@ body {
   align-items: center;
   justify-content: space-between;
   border: 1px solid #c8c8c8;
-  width: clamp(10rem, 25vw, 30rem);
+  width: clamp(15rem, 25vw, 30rem);
   height: 38px;
   border-radius: 8px;
   padding: 10px 21px 10px 0;
@@ -120,6 +121,11 @@ body {
   line-height: 22px;
   color: #ff9900;
 }
+
+.icon {
+  display: none;
+}
+
 /* Estilização do botão de navegação */
 
 /* Carrosel rotativo banner */
@@ -139,12 +145,15 @@ body {
 
   z-index: 2;
 }
+
 input[type="radio"]:checked + label {
   background-color: var(--laranja-claro);
 }
+
 .bar.active {
   background-color: var(--laranja-claro);
 }
+
 .bar {
   width: 66px;
   height: 15px;
@@ -159,6 +168,7 @@ input[type="radio"]:checked + label {
 .bar:hover {
   background-color: var(--laranja-claro);
 }
+
 /* Fim da estilização do botão de navegação */
 .content {
   width: 100vw;
@@ -272,6 +282,7 @@ input[type="radio"]:checked + label {
   gap: 30px;
   padding-top: 10px;
 }
+
 .destaque img {
   border-radius: 5px;
   width: 100%;
@@ -282,6 +293,7 @@ input[type="radio"]:checked + label {
 .box-recomendados {
   margin: 60px 100px;
 }
+
 .box-recomendados > h1 {
   color: var(--laranja);
 
@@ -293,9 +305,11 @@ input[type="radio"]:checked + label {
 
   margin: 0px 0px 18px 0px;
 }
+
 .recomendados {
   width: 100%;
 }
+
 .box-recomendado {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -304,6 +318,7 @@ input[type="radio"]:checked + label {
   text-align: center;
   margin: 0px 24px;
 }
+
 .recomendado {
   height: 300px;
   border: 1px solid var(--cinza);
@@ -311,16 +326,19 @@ input[type="radio"]:checked + label {
   justify-content: center;
   align-items: center;
 }
+
 .recomendado h1 {
   font-family: var(--font_nunito);
   font-weight: 700;
   font-size: 18px;
 }
+
 .recomendado-img {
   width: 244px;
   height: 244px;
   padding: 25px;
 }
+
 .recomendado-img img {
   width: 100%;
   height: 100%;
@@ -329,20 +347,62 @@ input[type="radio"]:checked + label {
 
 /* Fim do destaque recomendado */
 
-@media screen and (max-width: 1000px) {
-  .search-bar {
-    display: none;
+/* Inicio responcividade */
+
+@media screen and (max-width: 1024px) {
+  .categories {
+    bottom: -165%;
+    right: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
   }
 
-  .categories {
+  .categories > .option {
     display: none;
+    width: 100%;
+    padding: 5px;
+    background-color: white;
+    font-size: 18pt;
+  }
+
+  .categories.open > .option {
+    display: block;
+  }
+
+  .icon {
+    display: inline-block;
+    width: 50px;
   }
 
   .pipe {
     display: none;
   }
 
-  .slide > img {
-    aspect-ratio: 2 / 1;
+  .destaques {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box-recomendado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px 24px;
+  }
+  .recomendado {
+    height: 300px;
+    border: 1px solid var(--cinza);
+    display: grid;
+    justify-content: center;
+    align-items: center;
   }
 }
+
+/* Fim responcividade */
