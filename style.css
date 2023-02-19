@@ -22,7 +22,6 @@
   color: #fff0da;
   text-align: center;
   background-color: #ff9900;
-  width: 100%;
   height: 31px;
 }
 
@@ -30,14 +29,14 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 100%;
   height: 81px;
-  padding: 0 10%;
   border-bottom: 1px solid #c8c8c8;
 }
 
-#logo {
-  width: 106.85px;
+.searchArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .search-bar {
@@ -45,7 +44,7 @@
   align-items: center;
   justify-content: space-between;
   border: 1px solid #c8c8c8;
-  width: 247px;
+  width: clamp(10rem, 25vw, 30rem);
   height: 38px;
   border-radius: 8px;
   padding: 10px 21px 10px 0;
@@ -55,6 +54,7 @@
   border: none;
   outline: none;
   padding-left: 10px;
+  flex-grow: 1;
 }
 
 .categories {
@@ -74,6 +74,13 @@
   display: flex;
   align-items: center;
   height: 100%;
+}
+
+.userArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .pipe {
@@ -96,7 +103,7 @@
   font-family: var(--font_pt_sans);
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 16px;
   color: #4b4b4b;
 }
@@ -109,12 +116,13 @@
   line-height: 22px;
   color: #ff9900;
 }
-/* Carrosel rotativo banner */
-
 /* Estilização do botão de navegação */
+
+/* Carrosel rotativo banner */
 .slides input {
   display: none;
 }
+
 .navegation {
   position: absolute;
 
@@ -150,7 +158,6 @@
   overflow: hidden;
 
   position: relative;
-  z-index: 1;
 }
 /* orgazação de imagens dentro do objeto e transição */
 .slides {
@@ -159,7 +166,6 @@
 .slide img {
   width: 100vw;
   height: 100%;
-
   object-fit: cover;
 }
 .slide {
@@ -191,6 +197,7 @@
 
 .infoCards {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
@@ -210,6 +217,7 @@
   height: 196.66px;
   gap: 30px 0;
   text-align: center;
+  flex-grow: 1;
 }
 
 .infoTitle {
@@ -222,4 +230,22 @@
   font-size: 20px;
   line-height: 103.9%;
   gap: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .search-bar {
+    display: none;
+  }
+
+  .categories {
+    display: none;
+  }
+
+  .pipe {
+    display: none;
+  }
+
+  .slide > img {
+    aspect-ratio: 2 / 1;
+  }
 }
