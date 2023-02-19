@@ -272,7 +272,9 @@ input[type="radio"]:checked + label {
   scale: 102%;
 }
 .destaque img {
-  object-fit: cover;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
 }
 /* Fim do destaque */
 
