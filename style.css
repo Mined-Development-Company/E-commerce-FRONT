@@ -131,6 +131,12 @@ body {
 
   z-index: 2;
 }
+input[type="radio"]:checked + label {
+  background-color: var(--laranja-claro);
+}
+.bar.active {
+  background-color: var(--laranja-claro);
+}
 .bar {
   width: 66px;
   height: 15px;
