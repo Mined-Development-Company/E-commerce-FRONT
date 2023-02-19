@@ -1,5 +1,6 @@
 // Rotatividade automatica
 let count = 1;
+let label = document.querySelectorAll(".bar");
 setInterval(function () {
   nextImage();
 }, 5000);
@@ -12,7 +13,6 @@ function nextImage() {
   }
   document.getElementById("slide" + count).checked = true;
 }
-// fim da rotatividade automatica
 document.getElementById("slide");
 
 let countValue = document.querySelectorAll("[data-count]");
@@ -24,3 +24,4 @@ countValue.forEach((countValue) => {
 function atualizarValor(e) {
   count = e.target.dataset.count;
 }
+// fim da rotatividade automatica
