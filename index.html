@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Home</title>
   </head>
   <body>
@@ -51,11 +57,11 @@
     <div class="content">
       <div class="slides">
         <!-- Button navegation -->
-        <input type="radio" name="slide" id="slide1" checked />
-        <input type="radio" name="slide" id="slide2" />
-        <input type="radio" name="slide" id="slide3" />
-        <input type="radio" name="slide" id="slide4" />
-        <input type="radio" name="slide" id="slide5" />
+        <input type="radio" name="slide" data-count="1" id="slide1" checked />
+        <input type="radio" name="slide" data-count="2" id="slide2" />
+        <input type="radio" name="slide" data-count="3" id="slide3" />
+        <input type="radio" name="slide" data-count="4" id="slide4" />
+        <input type="radio" name="slide" data-count="5" id="slide5" />
         <!-- Fim button navegation -->
 
         <!-- image for slide -->
@@ -88,7 +94,7 @@
 
         <!-- style navegation -->
         <div class="navegation">
-          <label class="bar" for="slide1"></label>
+          <label class="bar active" for="slide1"></label>
           <label class="bar" for="slide2"></label>
           <label class="bar" for="slide3"></label>
           <label class="bar" for="slide4"></label>
@@ -139,6 +145,50 @@
     </div>
 
     <!-- Fim dos cards informativos -->
+
+    <!-- Inicio do destaque -->
+    <div class="box-destaques">
+      <h1>Destaque</h1>
+      <p>Para aproveitar o carnaval com estilo</p>
+      <div class="destaques">
+        <div class="destaque">
+          <img src="assets/destaque1.svg" alt="" />
+        </div>
+        <div class="destaque">
+          <img src="assets/destaque2.svg" alt="" />
+        </div>
+        <div class="destaque">
+          <img src="assets/destaque3.svg" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- Fim do destaque -->
+
+    <!-- Recomendado -->
+    <div class="box-recomendados">
+      <h1>Feito para você</h1>
+      <div class="recomendados">
+        <div class="box-recomendado">
+          <div class="recomendado">
+            <div class="recomendado-img"><img src="assets/recomendado1.svg" alt="" /></div>
+            <h1>tênis</h1>
+          </div>
+          <div class="recomendado">
+            <div class="recomendado-img"><img src="assets/recomendado2.svg" alt="" /></div>
+            <h1>vestidos</h1>
+          </div>
+          <div class="recomendado">
+            <div class="recomendado-img"><img src="assets/recomendado3.svg" alt="" /></div>
+            <h1>blusinhas</h1>
+          </div class="recomendado-img">
+          <div class="recomendado">
+            <div class="recomendado-img"><img src="assets/recomendado4.svg" alt="" /></div>
+            <h1>calças</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fim do recomendado -->
 
     <!-- Script -->
     <script src="script.js"></script>

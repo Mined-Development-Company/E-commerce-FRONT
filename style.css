@@ -3,7 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  width: 100vw;
+  min-width: 100%;
+  overflow-x: hidden;
+}
 :root {
   --font_nunito: "Nunito", sans-serif;
   --font_pt_sans: "PT Sans", sans-serif;
@@ -135,6 +139,12 @@
 
   z-index: 2;
 }
+input[type="radio"]:checked + label {
+  background-color: var(--laranja-claro);
+}
+.bar.active {
+  background-color: var(--laranja-claro);
+}
 .bar {
   width: 66px;
   height: 15px;
@@ -142,6 +152,7 @@
   margin: 15px;
 
   border: 3px solid var(--laranja-claro);
+
   border-radius: 15px;
   cursor: pointer;
 }
@@ -215,7 +226,7 @@
   border-radius: 10px;
   width: 285.62px;
   height: 196.66px;
-  gap: 30px 0;
+  gap: 30px;
   text-align: center;
   flex-grow: 1;
 }
@@ -231,6 +242,92 @@
   line-height: 103.9%;
   gap: 10px;
 }
+/* Fim dos cards informativos */
+
+/* Inicio do destaque */
+.box-destaques {
+  margin: 0px 100px;
+
+  width: auto;
+
+  text-align: center;
+}
+.box-destaques h1 {
+  font-family: var(--font_nunito);
+  font-weight: 700;
+
+  color: var(--laranja);
+
+  text-shadow: 1px 1px 1px black;
+}
+.box-destaques p {
+  font-family: var(--font_pt_sans);
+  font-size: 15px;
+  font-weight: 400;
+
+  color: var(--preto-cinza);
+}
+.destaques {
+  display: flex;
+  gap: 30px;
+  padding-top: 10px;
+}
+.destaque img {
+  border-radius: 5px;
+  width: 100%;
+}
+/* Fim do destaque */
+
+/* Destaque recomendado */
+.box-recomendados {
+  margin: 60px 100px;
+}
+.box-recomendados > h1 {
+  color: var(--laranja);
+
+  font-family: var(--font_nunito);
+
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px black;
+
+  margin: 0px 0px 18px 0px;
+}
+.recomendados {
+  width: 100%;
+}
+.box-recomendado {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0px 24px;
+}
+.recomendado {
+  height: 300px;
+  border: 1px solid var(--cinza);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.recomendado h1 {
+  font-family: var(--font_nunito);
+  font-weight: 700;
+  font-size: 18px;
+}
+.recomendado-img {
+  width: 244px;
+  height: 244px;
+  padding: 25px;
+}
+.recomendado-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Fim do destaque recomendado */
 
 @media screen and (max-width: 1000px) {
   .search-bar {
