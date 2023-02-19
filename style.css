@@ -3,7 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  width: 100vw;
+  min-width: 100%;
+  overflow-x: hidden;
+}
 :root {
   --font_nunito: "Nunito", sans-serif;
   --font_pt_sans: "PT Sans", sans-serif;
@@ -208,7 +212,7 @@
   border-radius: 10px;
   width: 285.62px;
   height: 196.66px;
-  gap: 30px 0;
+  gap: 30px;
   text-align: center;
 }
 
@@ -223,3 +227,38 @@
   line-height: 103.9%;
   gap: 10px;
 }
+/* Fim dos cards informativos */
+
+/* Inicio do destaque */
+.box-destaques {
+  margin: 0px 100px;
+
+  width: auto;
+
+  text-align: center;
+}
+.box-destaques h1 {
+  font-family: var(--font_nunito);
+  font-weight: 700;
+
+  color: var(--laranja);
+
+  text-shadow: 1px 1px 1px black;
+}
+.box-destaques p {
+  font-family: var(--font_pt_sans);
+  font-size: 15px;
+  font-weight: 400;
+
+  color: var(--preto-cinza);
+}
+.destaques {
+  display: flex;
+  gap: 30px;
+  padding-top: 10px;
+}
+.destaque img {
+  border-radius: 5px;
+  width: 100%;
+}
+/* Fim do destaque */

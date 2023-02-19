@@ -1,25 +1,26 @@
 // Rotatividade automatica
-let count = 1
+let count = 1;
 setInterval(function () {
-  nextImage()
-}, 5000)
+  nextImage();
+}, 5000);
 
 function nextImage() {
-  count++
-  if (count > 4) {
-    count = 1
+  count++;
+  console.log(count);
+  if (count >= 5) {
+    count = 1;
   }
-  document.getElementById("slide" + count).checked = true
+  document.getElementById("slide" + count).checked = true;
 }
 // fim da rotatividade automatica
 document.getElementById("slide");
 
-let countValue = document.querySelectorAll("[data-valor]");
+let countValue = document.querySelectorAll("[data-count]");
 
 countValue.forEach((countValue) => {
   countValue.addEventListener("click", atualizarValor);
 });
 
 function atualizarValor(e) {
-  count = e.countValue;
+  count = e.target.dataset.count;
 }
