@@ -11,10 +11,8 @@ function nextImage() {
   }
   label.forEach((label) => label.classList.remove("active"));
   document.querySelector(`[for=slide${count}]`).classList.add("active");
-
   document.getElementById("slide" + count).checked = true;
 }
-document.getElementById("slide");
 
 let countValue = document.querySelectorAll("[data-count]");
 
@@ -30,3 +28,9 @@ function atualizarValor(e) {
   intervalo = setInterval(nextImage, 5000);
 }
 // fim da rotatividade automatica
+
+let categorias = document.querySelector(".categories")
+
+function toggleMenu() {
+  categorias.classList.toggle("open")
+}

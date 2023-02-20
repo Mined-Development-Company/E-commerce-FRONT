@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="./assets/minedIcon.png" type="image/x-icon">
     <title>Home</title>
   </head>
   <body>
@@ -22,11 +23,14 @@
       <div id="headerTitle">Mineração revolucionando a moda Brasileira!</div>
 
       <div id="navMenu">
+
         <img id="logo" src="assets/logo.svg" alt="Um nariz grandão" />
 
-        <div class="search-bar">
-          <input type="text" />
-          <img src="assets/lupa.svg" alt="lupinha" />
+        <div class="searchArea">
+          <div class="search-bar">
+            <input type="text" />
+            <img src="assets/lupa.svg" alt="lupinha" />
+          </div>
         </div>
 
         <div class="categories">
@@ -37,17 +41,20 @@
           <div class="option">Acessórios</div>
         </div>
 
-        <div class="pipe"></div>
-
-        <img src="assets/cart.svg" alt="carrinho" />
-
-        <div class="perfil">
-          <img src="assets/avartar.svg" alt="o ultimo mestre do ar" />
-          <div class="Login">
-            <label for="Login">Olá, faça seu</label>
-            <p id="Login">Login/Cadastro</p>
+        <div class="userArea">
+          <div class="pipe"></div>
+          <div class="perfil">
+            <img src="assets/cart.svg" alt="carrinho" />
+            <img src="assets/avartar.svg" alt="o ultimo mestre do ar" />
+            <div class="Login">
+              <label for="Login">Olá, faça seu</label>
+              <p id="Login">Login/Cadastro</p>
+            </div>
           </div>
-        </div>
+          <a href="javascript: void(0);" class="icon" onclick="toggleMenu()">
+            <img src="./assets/menuIcon.svg" alt="icone do menu">
+          </a>
+       </div>
       </div>
     </nav>
 
@@ -64,19 +71,29 @@
 
         <!-- image for slide -->
         <div class="slide s1">
-          <img src="assets/slide1.png" alt="" />
+          <picture>
+            <img src="assets/slide1.webp" alt="" />
+          </picture>
         </div>
         <div class="slide">
-          <img src="assets/slide2.png" alt="" />
+          <picture>
+            <img src="assets/slide2.webp" alt="" />
+          </picture>
         </div>
         <div class="slide">
-          <img src="assets/slide3.png" alt="" />
+          <picture>
+            <img src="assets/slide3.webp" alt="" />
+          </picture>
         </div>
         <div class="slide">
-          <img src="assets/slide4.png" alt="" />
+          <picture>
+            <img src="assets/slide4.webp" alt="" />
+          </picture>
         </div>
         <div class="slide">
-          <img src="assets/slide5.png" alt="" />
+          <picture>
+            <img src="assets/slide5.webp" alt="" />
+          </picture>
         </div>
         <!-- Fim image for slide -->
 

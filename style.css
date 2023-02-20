@@ -26,7 +26,6 @@ body {
   color: #fff0da;
   text-align: center;
   background-color: #ff9900;
-  width: 100%;
   height: 31px;
 }
 
@@ -34,14 +33,15 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 100%;
   height: 81px;
-  padding: 0 10%;
   border-bottom: 1px solid #c8c8c8;
+  position: relative;
 }
 
-#logo {
-  width: 106.85px;
+.searchArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .search-bar {
@@ -49,16 +49,17 @@ body {
   align-items: center;
   justify-content: space-between;
   border: 1px solid #c8c8c8;
-  width: 247px;
+  width: clamp(15rem, 25vw, 30rem);
   height: 38px;
   border-radius: 8px;
-  padding: 10px 21px 10px 0;
+  padding: 10px 21px;
 }
 
 .search-bar > input {
   border: none;
   outline: none;
-  padding-left: 10px;
+  /* padding-left: 10px; */
+  flex-grow: 1;
 }
 
 .categories {
@@ -78,6 +79,13 @@ body {
   display: flex;
   align-items: center;
   height: 100%;
+}
+
+.userArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .pipe {
@@ -100,7 +108,7 @@ body {
   font-family: var(--font_pt_sans);
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 16px;
   color: #4b4b4b;
 }
@@ -113,12 +121,18 @@ body {
   line-height: 22px;
   color: #ff9900;
 }
-/* Carrosel rotativo banner */
+
+.icon {
+  display: none;
+}
 
 /* Estilização do botão de navegação */
+
+/* Carrosel rotativo banner */
 .slides input {
   display: none;
 }
+
 .navegation {
   position: absolute;
 
@@ -131,12 +145,15 @@ body {
 
   z-index: 2;
 }
+
 input[type="radio"]:checked + label {
   background-color: var(--laranja-claro);
 }
+
 .bar.active {
   background-color: var(--laranja-claro);
 }
+
 .bar {
   width: 66px;
   height: 15px;
@@ -151,6 +168,7 @@ input[type="radio"]:checked + label {
 .bar:hover {
   background-color: var(--laranja-claro);
 }
+
 /* Fim da estilização do botão de navegação */
 .content {
   width: 100vw;
@@ -161,7 +179,6 @@ input[type="radio"]:checked + label {
   overflow: hidden;
 
   position: relative;
-  z-index: 1;
 }
 /* orgazação de imagens dentro do objeto e transição */
 .slides {
@@ -170,7 +187,6 @@ input[type="radio"]:checked + label {
 .slide img {
   width: 100vw;
   height: 100%;
-
   object-fit: cover;
 }
 .slide {
@@ -202,11 +218,13 @@ input[type="radio"]:checked + label {
 
 .infoCards {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
   height: auto;
   margin: 3% 0;
+  padding-inline: 20px;
+  gap: 20px;
 }
 
 .infoCard {
@@ -221,6 +239,7 @@ input[type="radio"]:checked + label {
   height: 196.66px;
   gap: 30px;
   text-align: center;
+  flex-grow: 1;
 }
 
 .infoTitle {
@@ -239,9 +258,7 @@ input[type="radio"]:checked + label {
 /* Inicio do destaque */
 .box-destaques {
   margin: 0px 100px;
-
   width: auto;
-
   text-align: center;
 }
 .box-destaques h1 {
@@ -261,9 +278,12 @@ input[type="radio"]:checked + label {
 }
 .destaques {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
   padding-top: 10px;
 }
+
 .destaque {
   transition: all 0.5s;
 }
@@ -271,6 +291,7 @@ input[type="radio"]:checked + label {
   cursor: pointer;
   scale: 102%;
 }
+
 .destaque img {
   border-radius: 5px;
   width: 100%;
@@ -282,6 +303,7 @@ input[type="radio"]:checked + label {
 .box-recomendados {
   margin: 60px 100px;
 }
+
 .box-recomendados > h1 {
   color: var(--laranja);
 
@@ -293,9 +315,11 @@ input[type="radio"]:checked + label {
 
   margin: 0px 0px 18px 0px;
 }
+
 .recomendados {
   width: 100%;
 }
+
 .box-recomendado {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -304,6 +328,7 @@ input[type="radio"]:checked + label {
   text-align: center;
   margin: 0px 24px;
 }
+
 .recomendado {
   height: 300px;
   border: 1px solid var(--cinza);
@@ -311,11 +336,13 @@ input[type="radio"]:checked + label {
   justify-content: center;
   align-items: center;
 }
+
 .recomendado h1 {
   font-family: var(--font_nunito);
   font-weight: 700;
   font-size: 18px;
 }
+
 .recomendado-img {
   width: 244px;
   height: 244px;
@@ -326,6 +353,7 @@ input[type="radio"]:checked + label {
 .recomendado-img:hover {
   scale: 120%;
 }
+
 .recomendado-img img {
   width: 100%;
   height: 100%;
@@ -333,6 +361,113 @@ input[type="radio"]:checked + label {
 }
 
 /* Fim do destaque recomendado */
+
+/* Inicio reponsividade */
+/* Inicio responsividade notebook, tablet */
+
+@media screen and (max-width: 1024px) {
+  .categories {
+    bottom: -165%;
+    right: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .categories > .option {
+    display: none;
+    width: 100%;
+    padding: 5px;
+    background-color: white;
+    font-size: 18pt;
+  }
+
+  .categories.open > .option {
+    display: block;
+  }
+
+  .icon {
+    display: inline-block;
+    width: 50px;
+  }
+
+  .pipe {
+    display: none;
+  }
+
+  .destaques {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box-recomendado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px 24px;
+  }
+  .recomendado {
+    height: 300px;
+    border: 1px solid var(--cinza);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Fim responsividade notebook, tablet */
+
+/* Inicio responsividade celular */
+
+@media screen and (max-width: 620px) {
+  #navMenu {
+    height: auto;
+    padding: 5px 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "l"
+      "p"
+      "u";
+    row-gap: 15px;
+  }
+
+  #logo {
+    margin-inline: auto;
+    grid-area: l;
+  }
+
+  .searchArea {
+    width: 100%;
+    grid-area: p;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .categories {
+    bottom: -105%;
+  }
+
+  .userArea {
+    grid-area: u;
+    justify-content: space-between;
+  }
+
+  .box-destaques {
+    margin-inline: 50px;
+  }
+}
+
+/* Fim responsividade celular */
+/* Fim responsividade */
 
 /* footer */
 footer {
