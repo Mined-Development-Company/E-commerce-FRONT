@@ -1,13 +1,11 @@
 // Rotatividade automatica
 let count = 1;
-let label = document.querySelectorAll("label.bar");
-setInterval(function () {
-  nextImage();
-}, 5000);
+let label = document.querySelectorAll(".bar");
+console.log(label);
+let intervalo = setInterval(nextImage, 5000);
 
 function nextImage() {
   count++;
-
   if (count > 5) {
     count = 1;
   }
@@ -26,6 +24,8 @@ function atualizarValor(e) {
   count = e.target.dataset.count;
   label.forEach((label) => label.classList.remove("active"));
   document.querySelector(`[for=slide${count}]`).classList.add("active");
+  clearInterval(intervalo);
+  intervalo = setInterval(nextImage, 5000);
 }
 // fim da rotatividade automatica
 
