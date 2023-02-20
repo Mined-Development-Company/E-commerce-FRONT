@@ -28,7 +28,8 @@
 
         <div class="searchArea">
           <div class="search-bar">
-            <input type="text" />
+            <label for="pesquisa" class="sr-only">barra de pesquisa</label>
+            <input type="text" id="pesquisa" name="pesquisa" />
             <img src="assets/lupa.svg" alt="lupinha" />
           </div>
         </div>
@@ -51,7 +52,7 @@
               <p id="Login">Login/Cadastro</p>
             </div>
           </div>
-          <a href="javascript: void(0);" class="icon" onclick="toggleMenu()">
+          <a href="javascript: void(0);" class="icon" onclick="toggleMenu()" aria-label="menu expansivo para telas de celular">
             <img src="./assets/menuIcon.svg" alt="icone do menu">
           </a>
        </div>
@@ -201,7 +202,7 @@
       <!-- logo e redes (footer)-->
       <div class="footer">
         <div class="logo-footer"> <img src="assets/logo-footer.svg" alt=""></div>
-          <div class="redes"> <img src="assets/tiktok.svg" alt=""> <p>tiktok</p></div>
+        <div class="redes"> <img src="assets/tiktok.svg" alt=""> <p>tiktok</p></div>
         <div class="redes"> <img src="assets/instagram.svg" alt=""> <P>instagram</P></div>
         <div class="redes"> <img src="assets/youtube.svg" alt=""> <p>youtube</p></div>
         <div class="redes"> <img src="assets/spotify.svg" alt=""> <p>spotify</p></div>
