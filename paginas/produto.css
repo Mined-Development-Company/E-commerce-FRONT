@@ -1,0 +1,209 @@
+:root {
+  --font_nunito: "Nunito", sans-serif;
+  --font_pt_sans: "PT Sans", sans-serif;
+  --branco: #ffffff;
+  --black: #000000;
+  --preto-cinza: #2c2c2c;
+  --cinza: #c8c8c8;
+  --preto-laranja: #0d0800;
+  --laranja: #ff9900;
+  --laranja-claro: #fff0da;
+}
+
+main {
+  width: 100%;
+}
+
+.product {
+  margin: 30px 100px;
+  padding: 50px 150px 50px 100px;
+  background-color: var(--laranja-claro);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.imgs {
+  width: 500px;
+}
+
+.imgs>.productImg {
+  width: inherit;
+  margin-bottom: 24px;
+  border-radius: 6px;
+}
+
+.productImg {
+  position: relative;
+}
+
+.productImg>img {
+  width: inherit;
+}
+
+.productImg>span {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  width: 46px;
+  height: 46px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--cinza);
+}
+
+.productImgs {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.productImgs>img {
+  width: 120px;
+  border-radius: 6px;
+}
+
+.productImgs>img.selected {
+  outline: var(--laranja) solid 2px;
+}
+
+.description {
+  margin-top: 140px;
+  font-size: 18px;
+}
+
+.description>h1 {
+  font-size: 40px;
+}
+
+.description>p:first-of-type {
+  margin-block: 30px 20px;
+}
+
+#size {
+  font-weight: bold;
+}
+
+.sizes>button {
+  background-color: transparent;
+  border: var(--laranja) solid 1px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  transition: background-color .25s ease;
+}
+
+.sizes>button:hover {
+  background-color: var(--laranja);
+}
+
+.price {
+  margin-block: 15px 25px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* seleção da cor da roupa */
+
+.colors {
+  display: flex;
+  gap: 10px;
+}
+
+.colors label {
+  display: none;
+}
+
+.colors>input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+.colors>input[type='radio']#roxo:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #c506cc;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+.colors>input[type='radio']#cinza:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #97AD98;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+.colors>input[type='radio']#laranja:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: var(--laranja);
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+.colors>input[type='radio']#verde:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #113F0C;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+/* fim seleção da cor da roupa */
+
+.buttons {
+  margin-top: 60px;
+  display: flex;
+  gap: 15px;
+}
+
+.buttons>button {
+  width: 160px;
+  height: 50px;
+  background-color: transparent;
+  border: var(--cinza) solid 1px;
+  border-radius: 10px;
+}
+
+.buttons>.comprar {
+  background-color: var(--laranja);
+  border: var(--laranja) solid 1px;
+  font-weight: bold;
+}

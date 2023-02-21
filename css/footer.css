@@ -1,0 +1,81 @@
+:root {
+  --font_nunito: "Nunito", sans-serif;
+  --font_pt_sans: "PT Sans", sans-serif;
+  --branco: #ffffff;
+  --black: #000000;
+  --preto-cinza: #2c2c2c;
+  --cinza: #c8c8c8;
+  --preto-laranja: #0d0800;
+  --laranja: #ff9900;
+  --laranja-claro: #fff0da;
+}
+
+/* footer */
+
+footer {
+  background-color: var(--laranja);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.redes {
+  display: flex;
+  flex-direction: row;
+  width: 30px;
+  height: 20px;
+
+  margin: 20px 0px;
+}
+
+footer h1 {
+  font-family: var(--font_nunito);
+  margin-bottom: 15px;
+  font-size: 1.4em;
+}
+
+footer p {
+  font-family: var(--font_pt_sans);
+  margin-bottom: 20px;
+}
+
+.footer {
+  padding: 20px;
+}
+
+.f5 {
+  overflow: hidden;
+}
+
+/* Fim do footer */
+
+/* Inicio reponsividade */
+/* Inicio responsividade notebook, tablet */
+
+@media screen and (max-width: 1024px) {
+  footer {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    justify-content: center;
+  }
+}
+
+/* Fim responsividade notebook, tablet */
+
+/* Inicio responsividade celular */
+
+@media screen and (max-width: 620px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .footer {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+/* Fim responsividade celular */
+/* Fim responsividade */

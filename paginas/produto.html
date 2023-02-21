@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="produto.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/minedIcon.png"
+      type="image/x-icon"
+    />
+    <title>Home</title>
+  </head>
+  <body>
+    <nav>
+      <div id="headerTitle">Mineração revolucionando a moda Brasileira!</div>
+
+      <div id="navMenu">
+        <img id="logo" src="../assets/logo.svg" alt="Um nariz grandão" />
+
+        <div class="searchArea">
+          <div class="search-bar">
+            <label for="pesquisa" class="sr-only">barra de pesquisa</label>
+            <input type="text" id="pesquisa" name="pesquisa" />
+            <img src="../assets/lupa.svg" alt="lupinha" />
+          </div>
+        </div>
+
+        <div class="categories">
+          <div class="option">Básico</div>
+          <div class="option">Feminino</div>
+          <div class="option">Masculino</div>
+          <div class="option">Jeans</div>
+          <div class="option">Acessórios</div>
+        </div>
+
+        <div class="userArea">
+          <div class="pipe"></div>
+          <div class="perfil">
+            <img src="../assets/cart.svg" alt="carrinho" />
+            <img src="../assets/avartar.svg" alt="o ultimo mestre do ar" />
+            <div class="Login">
+              <label for="Login">Olá, faça seu</label>
+              <p id="Login">Login/Cadastro</p>
+            </div>
+          </div>
+          <a
+            href="javascript: void(0);"
+            class="icon"
+            onclick="toggleMenu()"
+            aria-label="menu expansivo para telas de celular"
+          >
+            <img src="../assets/menuIcon.svg" alt="icone do menu" />
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="product">
+        <div class="imgs">
+          <div class="productImg">
+            <img
+              src="imgs/mulher-de-roxo.png"
+              class="selectedImg"
+              alt="mulher com roupa roxa"
+            />
+            <span><img src="./imgs/favorito.svg" alt="favorito" /></span>
+          </div>
+          <div class="productImgs">
+            <img
+              src="imgs/mulher-de-roxo.png"
+              class="selected"
+              alt="mulher com roupa roxa"
+            />
+            <img src="imgs/mulher-de-cinza.png" alt="mulher com roupa cinza" />
+            <img
+              src="imgs/mulher-de-laranja.png"
+              alt="mulher com roupa laranja"
+            />
+            <img src="imgs/mulher-de-verde.png" alt="mulher com roupa " />
+          </div>
+        </div>
+        <div class="description">
+          <h1>social chamel camp</h1>
+          <p>tamanho: <span id="size">escolha um tamanho</span></p>
+          <div class="sizes">
+            <button type="button" id="size-pp">PP</button>
+            <button type="button" id="size-m">M</button>
+            <button type="button" id="size-g">G</button>
+            <button type="button" id="size-gg">GG</button>
+          </div>
+          <p class="price">R$ 69,90</p>
+          <div class="colors">
+            <label for="roxo" class="sr-only">roxo</label>
+            <input type="radio" name="color" id="roxo" />
+            <label for="cinza" class="sr-only">cinza</label>
+            <input type="radio" name="color" id="cinza" />
+            <label for="laranja" class="sr-only">laranja</label>
+            <input type="radio" name="color" id="laranja" />
+            <label for="verde" class="sr-only">verde</label>
+            <input type="radio" name="color" id="verde" />
+          </div>
+          <div class="buttons">
+            <button class="addCarinho">ADICIONE AO CARRINHO</button>
+            <button class="comprar">COMPRAR</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- inicio do foooter -->
+    <footer>
+      <!-- logo e redes (footer)-->
+      <div class="footer">
+        <div class="logo-footer">
+          <img src="../assets/logo-footer.svg" alt="" />
+        </div>
+        <div class="redes">
+          <img src="../assets/tiktok.svg" alt="" />
+          <p>tiktok</p>
+        </div>
+        <div class="redes">
+          <img src="../assets/instagram.svg" alt="" />
+          <p>instagram</p>
+        </div>
+        <div class="redes">
+          <img src="../assets/youtube.svg" alt="" />
+          <p>youtube</p>
+        </div>
+        <div class="redes">
+          <img src="../assets/spotify.svg" alt="" />
+          <p>spotify</p>
+        </div>
+      </div>
+      <!-- Fim Logo e redes (footer)-->
+
+      <div class="footer">
+        <h1>Departamento</h1>
+        <p>Novidade</p>
+        <p>Feminino</p>
+        <p>Masculino</p>
+        <p>jeans</p>
+        <p>acessórios</p>
+        <p>sale</p>
+        <p>inverno</p>
+      </div>
+      <div class="footer f3">
+        <h1>Sobre nós</h1>
+        <p>quem somos</p>
+        <p>loja</p>
+        <p>trabalhe conosco</p>
+        <p>termos de uso</p>
+        <p>politica de privacidade</p>
+        <p>black friday</p>
+        <p>glossário</p>
+      </div>
+      <div class="footer f4">
+        <h1>Quer ajuda?</h1>
+        <p>central de ajuda</p>
+        <p>central de privacidade</p>
+        <p>trocas e devoluções</p>
+        <p>formas de pagamento</p>
+        <div><img src="../assets/cartões-footer.svg" alt="" /></div>
+        <p>reclamações</p>
+      </div>
+      <div class="footer f5">
+        <h1>baixe nosso app</h1>
+        <div><img src="../assets/qrcode-app.svg.svg" alt="" /></div>
+        <p>certificados</p>
+        <div><img src="../assets/certificados-footer.svg" alt="" /></div>
+      </div>
+    </footer>
+    <!-- fim do footer -->
+  </body>
+</html>
