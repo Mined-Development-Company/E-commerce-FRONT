@@ -25,6 +25,7 @@ body {
 /* Carrosel rotativo banner */
 .slides input {
   display: none;
+  position: relative;
 }
 
 .navegation {
@@ -32,15 +33,14 @@ body {
 
   bottom: 20px;
 
-  left: 50%;
-  transform: translate(-50%);
+  transform: translate(90%);
 
   display: flex;
 
   z-index: 2;
 }
 
-input[type="radio"]:checked+label {
+input[type="radio"]:checked + label {
   background-color: var(--laranja-claro);
 }
 
@@ -94,23 +94,23 @@ input[type="radio"]:checked+label {
 /* Fim da orgazação de imagens dentro do objeto e transição */
 
 /* Movimentação do slide, usando o input para alterar a margin das imagens, mandando elas para a esquerda e assim criando o efeito de movimentação*/
-#slide1:checked~.s1 {
+#slide1:checked ~ .s1 {
   margin-left: 0;
 }
 
-#slide2:checked~.s1 {
+#slide2:checked ~ .s1 {
   margin-left: -100vw;
 }
 
-#slide3:checked~.s1 {
+#slide3:checked ~ .s1 {
   margin: -100vw;
 }
 
-#slide4:checked~.s1 {
+#slide4:checked ~ .s1 {
   margin-left: -300vw;
 }
 
-#slide5:checked~.s1 {
+#slide5:checked ~ .s1 {
   margin: -200vw;
 }
 
@@ -214,7 +214,7 @@ input[type="radio"]:checked+label {
   margin: 60px 100px;
 }
 
-.box-recomendados>h1 {
+.box-recomendados > h1 {
   color: var(--laranja);
 
   font-family: var(--font_nunito);
