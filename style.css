@@ -310,6 +310,9 @@ input[type="radio"]:checked + label {
   .box-destaques {
     margin-inline: 50px;
   }
+  .content {
+    display: none;
+  }
 }
 
 /* Fim responsividade celular */
