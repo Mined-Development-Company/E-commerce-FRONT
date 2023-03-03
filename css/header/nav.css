@@ -1,0 +1,19 @@
+.nav__titulo {
+    font-family: var(--font_nunito);
+    font-size: 14px;
+    display: grid;
+    place-items: center;
+    color: #fff0da;
+    text-align: center;
+    background-color: #ff9900;
+    height: 31px;
+  }
+  
+  .nav__menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 81px;
+    border-bottom: 1px solid #c8c8c8;
+    position: relative;
+  }
