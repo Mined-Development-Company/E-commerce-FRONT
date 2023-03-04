@@ -1,73 +1,73 @@
 @media screen and (max-width: 1024px) {
-    .dropdown {
-      bottom: -165%;
-      right: 0;
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      z-index: 1;
-    }
-  
-    .dropdown > .option {
-      display: none;
-      width: 100%;
-      padding: 5px;
-      background-color: white;
-      font-size: 18pt;
-    }
-  
-    .dropdown.open > .option {
-      display: block;
-    }
-  
-    .icon {
-      display: inline-block;
-      width: 50px;
-    }
-  
-    .pipe {
-      display: none;
-    }
+  .dropdown {
+    bottom: -165%;
+    right: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
   }
-  
-  /* Fim responsividade notebook, tablet */
-  
-  /* Inicio responsividade celular */
-  
-  @media screen and (max-width: 620px) {
-    #navMenu {
-      height: auto;
-      padding: 5px 10px;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "l"
-        "p"
-        "u";
-      row-gap: 15px;
-    }
-  
-    #logo {
-      margin-inline: auto;
-      grid-area: l;
-    }
-  
-    .searchArea {
-      width: 100%;
-      grid-area: p;
-    }
-  
-    .search-bar {
-      width: 100%;
-    }
-  
-    .dropdown {
-      bottom: -105%;
-    }
-  
-    .userArea {
-      grid-area: u;
-      justify-content: space-between;
-    }
+
+  .dropdown > .option {
+    display: none;
+    width: 100%;
+    padding: 5px;
+    background-color: white;
+    font-size: 18pt;
   }
+
+  .dropdown.open > .option {
+    display: block;
+  }
+
+  .icon {
+    display: inline-block;
+    width: 50px;
+  }
+
+  .pipe {
+    display: none;
+  }
+}
+
+/* Fim responsividade notebook, tablet */
+
+/* Inicio responsividade celular */
+
+@media screen and (max-width: 620px) {
+  #navMenu {
+    height: auto;
+    padding: 5px 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "l"
+      "p"
+      "u";
+    row-gap: 15px;
+  }
+
+  #logo {
+    margin-inline: auto;
+    grid-area: l;
+  }
+
+  .searchArea {
+    width: 100%;
+    grid-area: p;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .dropdown {
+    bottom: -105%;
+  }
+
+  .userArea {
+    grid-area: u;
+    justify-content: space-between;
+  }
+}
