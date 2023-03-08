@@ -9,13 +9,13 @@ const filter = document.querySelector("#pesquisa");
 
 const cards = document.querySelectorAll(".cards li");
 
-const form = document.querySelector("form");
+const search__bar = document.querySelector(".search__bar");
 
 filter.addEventListener("input", filterElements);
 
 function filterElements() {
   if (filter.value != "") {
-    form.style.background = "white";
+    search__bar.style.background = "white";
     for (let card of cards) {
       let title = card.querySelector("p");
 

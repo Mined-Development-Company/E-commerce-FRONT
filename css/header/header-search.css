@@ -32,3 +32,19 @@
   white-space: nowrap;
   border-width: 0;
 }
+/* search bar filter */
+.cards {
+  list-style-type: none;
+  position: absolute;
+  z-index: 999;
+  top: 115%;
+  left: -1%;
+  background-color: white;
+  width: 345px;
+  border-radius: 5px;
+}
+.cards li {
+  padding: 5px 20px;
+  margin: 2px 0px;
+  display: none;
+}

@@ -23,7 +23,7 @@ body {
   --laranja-claro: #fff0da;
 }
 
-.sr-only {
+.sr_only {
   position: absolute;
   width: 1px;
   height: 1px;
