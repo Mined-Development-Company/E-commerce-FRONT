@@ -119,6 +119,8 @@ body {
   bottom: -100px;
 
   background-color: #ffffff;
+
+  border-radius: 5px;
 }
 
 .dropdown > .option {
@@ -145,12 +147,12 @@ body {
   gap: 0 5px;
 }
 
-.Login {
+.login {
   display: flex;
   flex-direction: column;
 }
 
-.Login > label {
+.login > label {
   font-family: var(--font_pt_sans);
   font-style: normal;
   font-weight: 400;
@@ -159,13 +161,24 @@ body {
   color: #4b4b4b;
 }
 
-.Login > p {
+.login > p {
   font-family: var(--font_nunito);
   font-style: normal;
   font-weight: 800;
   font-size: 16px;
   line-height: 22px;
   color: #ff9900;
+}
+#login {
+  cursor: pointer;
+  font-family: var(--font_nunito);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 22px;
+  color: #ff9900;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .icon {
@@ -253,3 +266,31 @@ body {
 
 /* Fim responsividade celular */
 /* Fim responsividade */
+
+/* search bar filter */
+form {
+  margin: auto;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid red;
+}
+#pesquisa {
+  height: 30px;
+  border-radius: 5px;
+  position: relative;
+}
+.cards {
+  list-style-type: none;
+  position: absolute;
+  z-index: 999;
+  top: 115%;
+  left: -1%;
+  background-color: white;
+  width: 345px;
+  border-radius: 5px;
+}
+.cards li {
+  padding: 5px 20px;
+  margin: 2px 0px;
+  display: none;
+}

@@ -23,17 +23,29 @@
   <body>
     <nav>
       <div id="headerTitle">Mineração revolucionando a moda Brasileira!</div>
-      
-      <div id="navMenu">
 
-        <img id="logo" src="assets/logo.svg" alt="Um nariz grandão" />
+      <div id="navMenu">
+        <img id="logo" src="/E-commerce-FRONT/assets/logo.svg" alt="Um nariz grandão" />
 
         <div class="searchArea">
-          <div class="search-bar">
+          <form class="search-bar">
             <label for="pesquisa" class="sr-only">barra de pesquisa</label>
-            <input type="text" id="pesquisa" name="pesquisa" />
-            <img src="assets/lupa.svg" alt="lupinha" />
-          </div>
+            <input
+              type="text"
+              id="pesquisa"
+              name="pesquisa"
+              autocomplete="off"
+            />
+            <img src="/E-commerce-FRONT/assets/lupa.svg" alt="lupinha" />
+
+            <ul class="cards">
+              <li><p>Blusa</p></li>
+              <li><p>Camiseta</p></li>
+              <li><p>Shorts</p></li>
+              <li><p>Blusão</p></li>
+              <li><p>Calça</p></li>
+            </ul>
+          </form>
         </div>
         <!-- Menu dropdown -->
         <ul class="dropdown">
@@ -42,16 +54,16 @@
 
         <ul class="dropdown">
           <li class="option">Feminino</li>
-          <li class="dropdown-content"> 
+          <li class="dropdown-content">
             <ul class="dropdown">
-              <li><a href="">Saias</a> </li>
-              <li><a href="">Shorts</a> </li>
-              <li><a href="">Calças</a> </li>
-              <li><a href="">Calçados</a> </li>
+              <li><a href="">Saias</a></li>
+              <li><a href="">Shorts</a></li>
+              <li><a href="">Calças</a></li>
+              <li><a href="">Calçados</a></li>
             </ul>
           </li>
         </ul>
-        
+
         <ul class="dropdown">
           <li class="option">Masculino</li>
           <li class="dropdown-content">
@@ -63,7 +75,7 @@
             </ul>
           </li>
         </ul>
-        
+
         <ul class="dropdown">
           <li class="option">Jeans</li>
           <li class="dropdown-content">
@@ -74,40 +86,44 @@
             </ul>
           </li>
         </ul>
-      
-      <ul class="dropdown">
-        <li class="option">Acessórios</li>
-        <li class="dropdown-content">
-          <ul class="dropdown">
-            <li><a href="">Relogio</a></li>
-            <li><a href="">Pulseira</a></li>
-            <li><a href="">Blusas</a></li>
-            <li><a href="">Blusas</a></li>
-          </ul>
-        </li>
-      </ul>
-      <!-- Menu dropdown -->
 
-          <!-- <div class="option">Feminino</div>
+        <ul class="dropdown">
+          <li class="option">Acessórios</li>
+          <li class="dropdown-content">
+            <ul class="dropdown">
+              <li><a href="">Relogio</a></li>
+              <li><a href="">Pulseira</a></li>
+              <li><a href="">Blusas</a></li>
+              <li><a href="">Blusas</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- Menu dropdown -->
+
+        <!-- <div class="option">Feminino</div>
           <div class="option">Masculino</div>
           <div class="option">Jeans</div>
           <div class="option">Acessórios</div> -->
-        
 
         <div class="userArea">
           <div class="pipe"></div>
           <div class="perfil">
-            <img src="assets/cart.svg" alt="carrinho" />
-            <img src="assets/avartar.svg" alt="o ultimo mestre do ar" />
+            <img src="/E-commerce-FRONT/assets/cart.svg" alt="carrinho" />
+            <img src="/E-commerce-FRONT/assets/avartar.svg" alt="o ultimo mestre do ar" />
             <div class="Login">
               <label for="Login">Olá, faça seu</label>
               <p id="Login">Login/Cadastro</p>
             </div>
           </div>
-          <a href="javascript: void(0);" class="icon" onclick="toggleMenu()" aria-label="menu expansivo para telas de celular">
-            <img src="./assets/menuIcon.svg" alt="icone do menu">
+          <a
+            href="javascript: void(0);"
+            class="icon"
+            onclick="toggleMenu()"
+            aria-label="menu expansivo para telas de celular"
+          >
+            <img src="/E-commerce-FRONT/assets/menuIcon.svg" alt="icone do menu" />
           </a>
-       </div>
+        </div>
       </div>
     </nav>
 
@@ -250,14 +266,27 @@
 
     <!-- inicio do foooter -->
     <footer>
-
       <!-- logo e redes (footer)-->
       <div class="footer">
-        <div class="logo-footer"> <img src="assets/logo-footer.svg" alt=""></div>
-        <div class="redes"> <img src="assets/tiktok.svg" alt=""> <p>tiktok</p></div>
-        <div class="redes"> <img src="assets/instagram.svg" alt=""> <P>instagram</P></div>
-        <div class="redes"> <img src="assets/youtube.svg" alt=""> <p>youtube</p></div>
-        <div class="redes"> <img src="assets/spotify.svg" alt=""> <p>spotify</p></div>
+        <div class="logo-footer">
+          <img src="/E-commerce-FRONT/assets/logo-footer.svg" alt="" />
+        </div>
+        <div class="redes">
+          <img src="/E-commerce-FRONT/assets/tiktok.svg" alt="" />
+          <p>tiktok</p>
+        </div>
+        <div class="redes">
+          <img src="/E-commerce-FRONT/assets/instagram.svg" alt="" />
+          <p>instagram</p>
+        </div>
+        <div class="redes">
+          <img src="/E-commerce-FRONT/assets/youtube.svg" alt="" />
+          <p>youtube</p>
+        </div>
+        <div class="redes">
+          <img src="/E-commerce-FRONT/assets/spotify.svg" alt="" />
+          <p>spotify</p>
+        </div>
       </div>
       <!-- Fim Logo e redes (footer)-->
 
@@ -287,21 +316,21 @@
         <p>central de privacidade</p>
         <p>trocas e devoluções</p>
         <p>formas de pagamento</p>
-        <div> <img src="assets/cartões-footer.svg" alt=""></div>
+        <div><img src="/E-commerce-FRONT/assets/cartões-footer.svg" alt="" /></div>
         <p>reclamações</p>
       </div>
       <div class="footer f5">
         <h1>baixe nosso app</h1>
-        <div><img src="assets/qrcode-app.svg.svg" alt=""></div>
+        <div><img src="/E-commerce-FRONT/assets/qrcode-app.svg.svg" alt="" /></div>
         <p>certificados</p>
-        <div> <img src="assets/certificados-footer.svg" alt=""></div>
+        <div><img src="/E-commerce-FRONT/assets/certificados-footer.svg" alt="" /></div>
       </div>
-      
     </footer>
     <!-- fim do footer -->
 
     <!-- Script -->
-    <script src="script.js"></script>
+    <script src="/E-commerce-FRONT/Js/bannerRotativo.js"></script>
+    <script src="/E-commerce-FRONT/Js/barraDePesquisaFiltro.js"></script>
     <!-- Fim Script -->
   </body>
 </html>

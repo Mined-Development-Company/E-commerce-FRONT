@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/header.css" />
-    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="/E-commerce-FRONT/css/header.css" />
+    <link rel="stylesheet" href="/E-commerce-FRONT/css/footer.css" />
     <link rel="stylesheet" href="produto.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,29 +29,98 @@
       <div id="headerTitle">Mineração revolucionando a moda Brasileira!</div>
 
       <div id="navMenu">
-        <img id="logo" src="../assets/logo.svg" alt="Um nariz grandão" />
+        <img
+          id="logo"
+          src="/E-commerce-FRONT/assets/logo.svg"
+          alt="Um nariz grandão"
+        />
 
         <div class="searchArea">
-          <div class="search-bar">
+          <form class="search-bar">
             <label for="pesquisa" class="sr-only">barra de pesquisa</label>
-            <input type="text" id="pesquisa" name="pesquisa" />
-            <img src="../assets/lupa.svg" alt="lupinha" />
-          </div>
-        </div>
+            <input
+              type="text"
+              id="pesquisa"
+              name="pesquisa"
+              autocomplete="off"
+            />
+            <img src="/E-commerce-FRONT/assets/lupa.svg" alt="lupinha" />
 
-        <div class="categories">
-          <div class="option">Básico</div>
-          <div class="option">Feminino</div>
+            <ul class="cards">
+              <li><p>Blusa</p></li>
+              <li><p>Camiseta</p></li>
+              <li><p>Shorts</p></li>
+              <li><p>Blusão</p></li>
+              <li><p>Calça</p></li>
+            </ul>
+          </form>
+        </div>
+        <!-- Menu dropdown -->
+        <ul class="dropdown">
+          <li class="option">Básico</li>
+        </ul>
+
+        <ul class="dropdown">
+          <li class="option">Feminino</li>
+          <li class="dropdown-content">
+            <ul class="dropdown">
+              <li><a href="">Saias</a></li>
+              <li><a href="">Shorts</a></li>
+              <li><a href="">Calças</a></li>
+              <li><a href="">Calçados</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="dropdown">
+          <li class="option">Masculino</li>
+          <li class="dropdown-content">
+            <ul class="dropdown">
+              <li><a href="">Calças</a></li>
+              <li><a href="">Camisetas</a></li>
+              <li><a href="">Bermudas</a></li>
+              <li><a href="">Blusas</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="dropdown">
+          <li class="option">Jeans</li>
+          <li class="dropdown-content">
+            <ul class="dropdown">
+              <li><a href="">feminino</a></li>
+              <li><a href="">masculino</a></li>
+              <li><a href="">Gean</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="dropdown">
+          <li class="option">Acessórios</li>
+          <li class="dropdown-content">
+            <ul class="dropdown">
+              <li><a href="">Relogio</a></li>
+              <li><a href="">Pulseira</a></li>
+              <li><a href="">Blusas</a></li>
+              <li><a href="">Blusas</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- Menu dropdown -->
+
+        <!-- <div class="option">Feminino</div>
           <div class="option">Masculino</div>
           <div class="option">Jeans</div>
-          <div class="option">Acessórios</div>
-        </div>
+          <div class="option">Acessórios</div> -->
 
         <div class="userArea">
           <div class="pipe"></div>
           <div class="perfil">
-            <img src="../assets/cart.svg" alt="carrinho" />
-            <img src="../assets/avartar.svg" alt="o ultimo mestre do ar" />
+            <img src="/E-commerce-FRONT/assets/cart.svg" alt="carrinho" />
+            <img
+              src="/E-commerce-FRONT/assets/avartar.svg"
+              alt="o ultimo mestre do ar"
+            />
             <div class="Login">
               <label for="Login">Olá, faça seu</label>
               <p id="Login">Login/Cadastro</p>
@@ -63,7 +132,10 @@
             onclick="toggleMenu()"
             aria-label="menu expansivo para telas de celular"
           >
-            <img src="../assets/menuIcon.svg" alt="icone do menu" />
+            <img
+              src="/E-commerce-FRONT/assets/menuIcon.svg"
+              alt="icone do menu"
+            />
           </a>
         </div>
       </div>
@@ -185,5 +257,6 @@
       </div>
     </footer>
     <!-- fim do footer -->
+    <script src="/E-commerce-FRONT/Js/barraDePesquisaFiltro.js"></script>
   </body>
 </html>
