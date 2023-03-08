@@ -1,0 +1,44 @@
+.menu__categorias {
+  font-family: var(--font_nunito);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+
+  list-style-type: none;
+
+  line-height: 27px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+
+  gap: 0 21px;
+  height: 100%;
+}
+
+.menu__categorias .option {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+.menu__categorias:hover .menu__itens {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 150px;
+
+  position: absolute;
+  z-index: 9999;
+
+  bottom: -100px;
+
+  background-color: #ffffff;
+}

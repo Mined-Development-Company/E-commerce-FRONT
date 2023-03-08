@@ -1,0 +1,8 @@
+.menu__itens {
+  display: none;
+  margin: 20px;
+}
+.menu__itens a {
+  text-decoration: none;
+  color: var(--preto-laranja);
+}

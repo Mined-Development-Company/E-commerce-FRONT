@@ -4,31 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/footer.css">
+    <title>Mined Just Store</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="stylesheet" href="./css/header/header.css">
+    <link rel="stylesheet" href="./css/header/header-media.css">
+    <link rel="stylesheet" href="./css/header/header-search.css">
+    <link rel="stylesheet" href="./css/header/menu-categorias.css">
+    <link rel="stylesheet" href="./css/header/menu-itens.css">
+    <link rel="stylesheet" href="./css/header/nav.css">
+    <link rel="stylesheet" href="./css/header/login.css">
+
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/variaveis.css">
+
+    <!-- Icons -->
     <link rel="shortcut icon" href="./assets/minedIcon.png" type="image/x-icon">
-    <title>Home</title>
+
   </head>
-  <body>
+
+  <body class="container">
+
     <nav>
-      <div id="headerTitle">Mineração revolucionando a moda Brasileira!</div>
+      <h1 class="nav__titulo">Mineração revolucionando a moda Brasileira!</h1>
+      
+      <section class="nav__menu">
 
       <div id="navMenu">
-        <img id="logo" src="/E-commerce-FRONT/assets/logo.svg" alt="Um nariz grandão" />
+        <img id="logo" src="./assets/logo.svg" alt="Um nariz grandão" />
 
-        <div class="searchArea">
-          <form class="search-bar">
+        <section class="search__area">
+          <div class="search__bar">
             <label for="pesquisa" class="sr-only">barra de pesquisa</label>
             <input
               type="text"
@@ -36,7 +50,7 @@
               name="pesquisa"
               autocomplete="off"
             />
-            <img src="/E-commerce-FRONT/assets/lupa.svg" alt="lupinha" />
+            <img src="./assets/lupa.svg" alt="lupinha" />
 
             <ul class="cards">
               <li><p>Blusa</p></li>
@@ -45,47 +59,61 @@
               <li><p>Blusão</p></li>
               <li><p>Calça</p></li>
             </ul>
-          </form>
+          </div>
         </div>
         <!-- Menu dropdown -->
         <ul class="dropdown">
           <li class="option">Básico</li>
         </ul>
 
-        <ul class="dropdown">
+        <!-- Menu dropdown -->
+        <section class="menu__categorias">
           <li class="option">Feminino</li>
-          <li class="dropdown-content">
-            <ul class="dropdown">
-              <li><a href="">Saias</a></li>
-              <li><a href="">Shorts</a></li>
-              <li><a href="">Calças</a></li>
-              <li><a href="">Calçados</a></li>
+          <li class="menu__itens"> 
+            <ul class="menu__categorias">
+              <li><a href="">Saias</a> </li>
+              <li><a href="">Shorts</a> </li>
+              <li><a href="">Calças</a> </li>
+              <li><a href="">Calçados</a> </li>
             </ul>
           </li>
-        </ul>
-
-        <ul class="dropdown">
+        </section>
+        
+        <section class="menu__categorias">
           <li class="option">Masculino</li>
-          <li class="dropdown-content">
-            <ul class="dropdown">
+          <li class="menu__itens">
+            <ul class="menu__categorias">
               <li><a href="">Calças</a></li>
               <li><a href="">Camisetas</a></li>
               <li><a href="">Bermudas</a></li>
               <li><a href="">Blusas</a></li>
             </ul>
           </li>
-        </ul>
-
-        <ul class="dropdown">
+        </section>
+        
+        <section class="menu__categorias">
           <li class="option">Jeans</li>
-          <li class="dropdown-content">
-            <ul class="dropdown">
+          <li class="menu__itens">
+            <ul class="menu__categorias">
               <li><a href="">feminino</a></li>
               <li><a href="">masculino</a></li>
               <li><a href="">Gean</a></li>
             </ul>
           </li>
-        </ul>
+        </section>
+      
+        <section class="menu__categorias">
+        <li class="option">Acessórios</li>
+        <li class="menu__itens">
+          <ul class="menu__categorias">
+            <li><a href="">Relogio</a></li>
+            <li><a href="">Pulseira</a></li>
+            <li><a href="">Blusas</a></li>
+            <li><a href="">Blusas</a></li>
+          </ul>
+        </li>
+        </section>
+      <!-- Menu dropdown -->
 
         <ul class="dropdown">
           <li class="option">Acessórios</li>
@@ -105,11 +133,11 @@
           <div class="option">Jeans</div>
           <div class="option">Acessórios</div> -->
 
-        <div class="userArea">
+        <section class="user_area">
           <div class="pipe"></div>
           <div class="perfil">
-            <img src="/E-commerce-FRONT/assets/cart.svg" alt="carrinho" />
-            <img src="/E-commerce-FRONT/assets/avartar.svg" alt="o ultimo mestre do ar" />
+            <img src="./assets/cart.svg" alt="carrinho" />
+            <img src="./assets/avartar.svg" alt="o ultimo mestre do ar" />
             <div class="Login">
               <label for="Login">Olá, faça seu</label>
               <p id="Login">Login/Cadastro</p>
@@ -121,10 +149,12 @@
             onclick="toggleMenu()"
             aria-label="menu expansivo para telas de celular"
           >
-            <img src="/E-commerce-FRONT/assets/menuIcon.svg" alt="icone do menu" />
+            <img src="./assets/menuIcon.svg" alt="icone do menu" />
           </a>
-        </div>
-      </div>
+       </section>
+       
+      </section>
+
     </nav>
 
     <!---Carrosel rotativo Banner-->
@@ -141,27 +171,27 @@
         <!-- image for slide -->
         <div class="slide s1">
           <picture>
-            <img src="assets/slide1.webp" alt="" />
+            <img src="./assets/slide1.webp" alt="" />
           </picture>
         </div>
         <div class="slide">
           <picture>
-            <img src="assets/slide2.webp" alt="" />
+            <img src="./assets/slide2.webp" alt="" />
           </picture>
         </div>
         <div class="slide">
           <picture>
-            <img src="assets/slide3.webp" alt="" />
+            <img src="./assets/slide3.webp" alt="" />
           </picture>
         </div>
         <div class="slide">
           <picture>
-            <img src="assets/slide4.webp" alt="" />
+            <img src="./assets/slide4.webp" alt="" />
           </picture>
         </div>
         <div class="slide">
           <picture>
-            <img src="assets/slide5.webp" alt="" />
+            <img src="./assets/slide5.webp" alt="" />
           </picture>
         </div>
         <!-- Fim image for slide -->
@@ -184,7 +214,7 @@
     <div class="infoCards">
       <div class="infoCard">
         <div class="infoTitle">
-          <img src="assets/wallet.svg" alt="dinero" />
+          <img src="./assets/wallet.svg" alt="dinero" />
           <span>Parcelamento <br />sem Juros</span>
         </div>
 
@@ -196,7 +226,7 @@
 
       <div class="infoCard">
         <div class="infoTitle">
-          <img src="assets/bike.svg" alt="bike" />
+          <img src="./assets/bike.svg" alt="bike" />
           <span>Frete mais <br />Barato</span>
         </div>
 
@@ -207,7 +237,7 @@
       </div>
       <div class="infoCard">
         <div class="infoTitle">
-          <img src="assets/ticket.svg" alt="ticket" />
+          <img src="./assets/ticket.svg" alt="ticket" />
           <span>10% OFF na <br />Primeira compra</span>
         </div>
 
@@ -226,13 +256,13 @@
       <p>Para aproveitar o carnaval com estilo</p>
       <div class="destaques">
         <div class="destaque">
-          <img src="assets/destaque1.svg" alt="" />
+          <img src="./assets/destaque1.svg" alt="" />
         </div>
         <div class="destaque">
-          <img src="assets/destaque2.svg" alt="" />
+          <img src="./assets/destaque2.svg" alt="" />
         </div>
         <div class="destaque">
-          <img src="assets/destaque3.svg" alt="" />
+          <img src="./assets/destaque3.svg" alt="" />
         </div>
       </div>
     </div>
@@ -244,19 +274,19 @@
       <div class="recomendados">
         <div class="box-recomendado">
           <div class="recomendado">
-            <div class="recomendado-img"><img src="assets/recomendado1.svg" alt="" /></div>
+            <div class="recomendado-img"><img src="./assets/recomendado1.svg" alt="" /></div>
             <h1>tênis</h1>
           </div>
           <div class="recomendado">
-            <div class="recomendado-img"><img src="assets/recomendado2.svg" alt="" /></div>
+            <div class="recomendado-img"><img src="./assets/recomendado2.svg" alt="" /></div>
             <h1>vestidos</h1>
           </div>
           <div class="recomendado">
-            <div class="recomendado-img"><img src="assets/recomendado3.svg" alt="" /></div>
+            <div class="recomendado-img"><img src="./assets/recomendado3.svg" alt="" /></div>
             <h1>blusinhas</h1>
           </div class="recomendado-img">
           <div class="recomendado">
-            <div class="recomendado-img"><img src="assets/recomendado4.svg" alt="" /></div>
+            <div class="recomendado-img"><img src="./assets/recomendado4.svg" alt="" /></div>
             <h1>calças</h1>
           </div>
         </div>
@@ -269,22 +299,22 @@
       <!-- logo e redes (footer)-->
       <div class="footer">
         <div class="logo-footer">
-          <img src="/E-commerce-FRONT/assets/logo-footer.svg" alt="" />
+          <img src="./assets/logo-footer.svg" alt="" />
         </div>
         <div class="redes">
-          <img src="/E-commerce-FRONT/assets/tiktok.svg" alt="" />
+          <img src="./assets/tiktok.svg" alt="" />
           <p>tiktok</p>
         </div>
         <div class="redes">
-          <img src="/E-commerce-FRONT/assets/instagram.svg" alt="" />
+          <img src="./assets/instagram.svg" alt="" />
           <p>instagram</p>
         </div>
         <div class="redes">
-          <img src="/E-commerce-FRONT/assets/youtube.svg" alt="" />
+          <img src="./assets/youtube.svg" alt="" />
           <p>youtube</p>
         </div>
         <div class="redes">
-          <img src="/E-commerce-FRONT/assets/spotify.svg" alt="" />
+          <img src="./assets/spotify.svg" alt="" />
           <p>spotify</p>
         </div>
       </div>
@@ -316,21 +346,21 @@
         <p>central de privacidade</p>
         <p>trocas e devoluções</p>
         <p>formas de pagamento</p>
-        <div><img src="/E-commerce-FRONT/assets/cartões-footer.svg" alt="" /></div>
+        <div><img src="./assets/cartões-footer.svg" alt="" /></div>
         <p>reclamações</p>
       </div>
       <div class="footer f5">
         <h1>baixe nosso app</h1>
-        <div><img src="/E-commerce-FRONT/assets/qrcode-app.svg.svg" alt="" /></div>
+        <div><img src="./assets/qrcode-app.svg.svg" alt="" /></div>
         <p>certificados</p>
-        <div><img src="/E-commerce-FRONT/assets/certificados-footer.svg" alt="" /></div>
+        <div><img src="./assets/certificados-footer.svg" alt="" /></div>
       </div>
     </footer>
     <!-- fim do footer -->
 
     <!-- Script -->
-    <script src="/E-commerce-FRONT/Js/bannerRotativo.js"></script>
-    <script src="/E-commerce-FRONT/Js/barraDePesquisaFiltro.js"></script>
+    <script src="./Js/bannerRotativo.js"></script>
+    <script src="./Js/barraDePesquisaFiltro.js"></script>
     <!-- Fim Script -->
   </body>
 </html>

@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.container {
+  width: 100vw;
+  min-width: 100%;
+  overflow-x: hidden;
+}
+
+.user_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pipe {
+  height: 42px;
+  width: 1px;
+  background-color: black;
+}
+
+.perfil {
+  display: flex;
+  gap: 0 5px;
+}
+
+.icon {
+  display: none;
+}
+
+/* Estilização do botão de navegação */

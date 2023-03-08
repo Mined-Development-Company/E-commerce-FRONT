@@ -1,0 +1,22 @@
+.Login {
+  display: flex;
+  flex-direction: column;
+}
+
+.Login label {
+  font-family: var(--font_pt_sans);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #4b4b4b;
+}
+
+.Login p {
+  font-family: var(--font_nunito);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ff9900;
+}
