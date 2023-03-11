@@ -48,3 +48,8 @@
   margin: 2px 0px;
   display: none;
 }
+a {
+  text-decoration: none;
+  color: #0d0800;
+  font-family: var(--font_nunito);
+}
