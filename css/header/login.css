@@ -13,10 +13,265 @@
 }
 
 .Login p {
+  cursor: pointer;
+}
+
+.Login p, #nome_usuario {
   font-family: var(--font_nunito);
   font-style: normal;
   font-weight: 800;
   font-size: 16px;
   line-height: 22px;
   color: #ff9900;
+}
+
+.limite_de_caracteres {
+  max-width: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.autenticado {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: .3rem;
+}
+
+.deslogar {
+  cursor: pointer;
+  color: var(--branco);
+  font-family: var(--font_pt_sans);
+  padding: 0.2rem 1.6rem;
+  background: var(--cinza);
+  border-radius: 10px;
+}
+
+#modal_login {
+  display: none;
+}
+
+#modal_cadastro {
+  display: none;
+}
+
+.modal_login_e_cadastro_container {
+  position: absolute;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  border: none !important;
+  background-color: rgba(0, 0, 0, .16);
+}
+
+.content_login {
+  background-color: var(--branco);
+  font-family: var(--font_pt_sans);
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  width: 30%;
+  border-radius: 5px;
+}
+
+.content_header_dialog {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.info_commerce {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  padding: .4rem 0;
+  background-color: var(--laranja);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.logo-mined_icon {
+  height: 80%;
+}
+
+.highlight {
+  cursor: pointer;
+  color: var(--laranja);
+}
+
+.close_dialog {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.content_login > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.content_login > section p {
+  display: flex;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--black);
+}
+
+.content_login > section form {
+  width: 80%;
+}
+
+.content_login > section form .container_inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.content_login > section form .input_form {
+  width: 100%;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid var(--cinza);
+  padding: .67rem;
+  font-size: 1rem;
+}
+
+.input_idade::-webkit-outer-spin-button,
+.input_idade::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input_idade {
+  -moz-appearance:textfield;
+}
+
+.content_login > section form .selecionar_generico {
+  width: 100%;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid var(--cinza);
+  padding: .67rem;
+  font-size: 1rem;
+}
+
+.content_login > section form .no_outline{
+  outline: 0 !important;
+}
+
+.content_login > section form .content_password {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.content_login > section form .content_password > input {
+  border: 0;
+  width: 96%;
+  background-color: transparent;
+  padding: .67rem;
+  font-size: 1rem;
+}
+
+.content_login > section form .content_password .mostrar_fechar_senha {
+  padding: 0 .5rem;
+  cursor: pointer;
+}
+
+.content_login > section form .content_regra_senha_e_esqueci_senha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: .89rem;
+  color: var(--cinza);
+}
+
+.content_login > section form .content_regra_senha_e_esqueci_senha .esqueci_minha_senha {
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+  color: var(--black);
+}
+
+.content_login > section form .btn_generico {
+  cursor: pointer;
+  width: 100%;
+  color: var(--branco);
+  border-radius: 5px;
+  padding: .70rem;
+  font-size: 1.2rem;
+  border: 0;
+}
+
+.content_login > section form .btn_submit {
+  background-color: var(--black);
+  margin-top: 3rem;
+}
+
+.content_login > section form .content_nao_possui_cadastro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 5px;
+  width: 100%;
+}
+
+.content_login > section form .content_nao_possui_cadastro span {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.content_login > section form .content_nao_possui_cadastro > .btn_novo_cadastro {
+  background-color: var(--laranja);
+}
+
+.content_login > section form .content_nao_possui_cadastro > .btn_novo_cadastro {
+  background-color: var(--laranja);
+}
+
+.content_login .footer_dialog {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: .7rem;
+}
+
+.content_login .footer_dialog ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  gap: 5px;
+}
+
+.content_login .footer_dialog ul li {
+  display: flex;
+  align-items: baseline;
+  max-width: 90%;
+  gap: 5px;
+}
+
+.content_login .footer_dialog ul li span {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.content_login .site_seguro {
+  margin-top: .6rem;
+  font-weight: 700;
+  color: var(--cinza);
 }

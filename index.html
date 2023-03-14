@@ -32,14 +32,128 @@
   </head>
 
   <body class="container">
+    <!-- Modal login e cadastro -->
+    <div id="modal_login" class="modal_login_e_cadastro_container">
+      <main class="content_login">
+        <header class="content_header_dialog">
+          <div class="info_commerce">
+            <img src="./assets/logo_minedIcon.svg" class="logo-mined_icon" alt="o ultimo mestre do ar" />
+          </div>
+          <img src="./assets/close.svg" onclick="closeModal('login')" id="close_modal_login" class="close_dialog" alt="o ultimo mestre do ar" />
+        </header>
+
+        <section>
+          <p>Fazer login</p>
+
+          <form id="form_login">
+            <div id="auth_login" class="container_inputs">
+              <input type="text" class="input_form no_outline" placeholder="digite seu email*" name="email" id="email">
+
+              <div class="input_form content_password">
+                <input type="password" class="no_outline" name="senha" placeholder="digite sua senha*" id="senha">
+                <img src="./assets/eye.svg" onclick="mostrarSenha('login')" class="mostrar_fechar_senha" alt="o ultimo mestre do ar" />
+              </div>
+
+            </div>
+
+            <div class="content_regra_senha_e_esqueci_senha">
+              <span>minimo de 6 caracteres</span>
+              <span class="esqueci_minha_senha">esqueci minha senha</span>
+            </div>
+
+            <button class="btn_generico btn_submit" type="submit">entrar</button>
+
+            <div class="content_nao_possui_cadastro">
+              <span>não tem cadastro na loja virtual?</span>
+              <button onclick="abrirModalDeNovaConta()" id="nova_conta" class="btn_generico btn_novo_cadastro" type="button">crie sua conta!</button>
+            </div>
+          </form>
+        </section>
+
+        <div class="footer_dialog">
+          <ul>
+            <li>
+              <img src="./assets/check_icon.svg" class="check" alt="o ultimo mestre do ar" />
+              <span>10% de desconto na primeira compra</span>
+            </li>
+            <li>
+              <img src="./assets/check_icon.svg" class="check" alt="o ultimo mestre do ar" />
+              <span>compre mais rápido com endereços salvos</span>
+            </li>
+          </ul>
+
+          <div class="site_seguro">
+            <img src="./assets/cadiado_icon.svg" class="check" alt="o ultimo mestre do ar" />
+            <span>SITE SEGURO</span>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div id="modal_cadastro" class="modal_login_e_cadastro_container">
+      <main class="content_login">
+        <header class="content_header_dialog">
+          <div class="info_commerce">
+            <img src="./assets/logo_minedIcon.svg" class="logo-mined_icon" alt="o ultimo mestre do ar" />
+          </div>
+          <img src="./assets/close.svg" onclick="closeModal('cadastro')" id="close_modal_cadastro" class="close_dialog" alt="o ultimo mestre do ar" />
+        </header>
+
+        <section>
+          <p>Crie seu cadastro</p>
+
+          <form id="form_cadastro">
+            <div id="auth_cadastro" class="container_inputs">
+              <input type="text" class="input_form no_outline" placeholder="nome*" name="nome" id="nome" />
+
+              <select name="genero" id="genero" class="input_form selecionar_generico">
+                <option value="nulo">---</option>
+                <option value="nao_declarar">Não declarar</option>
+                <option value="masculino">Masculino</option>
+                <option value="mulher">Mulher</option>
+              </select>
+
+              <select name="idade" id="idade" class="input_form">
+                <option value="nulo">---</option>
+              </select>
+
+              <input type="text" class="input_form no_outline" placeholder="digite seu email*" name="email" id="email" />
+
+              <div class="input_form content_password">
+                <input type="password" class="no_outline" name="senha" placeholder="digite sua senha*" id="senha">
+                <img src="./assets/eye.svg" class="mostrar_fechar_senha" onclick="mostrarSenha('cadastro')" alt="o ultimo mestre do ar" />
+              </div>
+            </div>
+
+            <div class="content_regra_senha_e_esqueci_senha">
+              <span>minimo de 6 caracteres</span>
+            </div>
+
+            <div class="content_nao_possui_cadastro">
+              <span>Já tem uma conta? <span onclick="goBackLogin()" class="highlight">Faça login</span></span>
+              <button class="btn_generico btn_novo_cadastro" onclick="finalizarNovoCadastro()" type="button">Finalizar cadastro</button>
+            </div>
+          </form>
+        </section>
+
+        <div class="footer_dialog">
+          <div class="site_seguro">
+            <img src="./assets/cadiado_icon.svg" class="check" alt="o ultimo mestre do ar" />
+            <span>SITE SEGURO</span>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Final Modal login e cadastro -->
 
     <nav>
       <h1 class="nav__titulo">Mineração revolucionando a moda Brasileira!</h1>
-      
+
       <section class="nav__menu">
-        
+
         <div><img id="logo" src="./assets/logo.svg" alt="Um nariz grandão" /></div>
-        
+
       <div id="navMenu">
 
         <section class="search__area">
@@ -71,7 +185,7 @@
         </section>
         <section class="menu__categorias">
           <li class="option">Feminino</li>
-          <li class="menu__itens"> 
+          <li class="menu__itens">
             <ul class="menu__categorias">
               <li><a href="">Saias</a> </li>
               <li><a href="">Shorts</a> </li>
@@ -80,7 +194,7 @@
             </ul>
           </li>
         </section>
-        
+
         <section class="menu__categorias">
           <li class="option">Masculino</li>
           <li class="menu__itens">
@@ -92,7 +206,7 @@
             </ul>
           </li>
         </section>
-        
+
         <section class="menu__categorias">
           <li class="option">Jeans</li>
           <li class="menu__itens">
@@ -103,7 +217,7 @@
             </ul>
           </li>
         </section>
-      
+
         <section class="menu__categorias">
         <li class="option">Acessórios</li>
         <li class="menu__itens">
@@ -122,9 +236,13 @@
           <div class="perfil">
             <img src="./assets/cart.svg" alt="carrinho" />
             <img src="./assets/avartar.svg" alt="o ultimo mestre do ar" />
-            <div class="Login">
+            <div id="auth_project" class="Login">
               <label for="Login">Olá, faça seu</label>
-              <p id="Login">Login/Cadastro</p>
+              <div class="autenticado">
+                <span id="nome_usuario"></span>
+                <span id="sair_conta" onclick="deslogar()"></span>
+              </div>
+              <p onclick="abrirModal()">Login/Cadastro</p>
             </div>
           </div>
           <a
@@ -136,7 +254,7 @@
             <img src="./assets/menuIcon.svg" alt="icone do menu" />
           </a>
        </section>
-       
+
       </section>
 
     </nav>
@@ -345,6 +463,7 @@
     <!-- Script -->
     <script src="./Js/bannerRotativo.js"></script>
     <script src="./Js/barraDePesquisaFiltro.js"></script>
+    <script src="./Js/loginCadastro.js"></script>
     <!-- Fim Script -->
   </body>
 </html>
