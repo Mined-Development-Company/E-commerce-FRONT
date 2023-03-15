@@ -5,7 +5,7 @@ boxRoupas.forEach((element, index) => {
   const inputs = element.querySelectorAll('.boxInput input[type="radio"]');
   inputs.forEach(element => {
     element.addEventListener("click", e => {
-      boxImage.style.backgroundImage = `url('../paginas/imgs/Roupas/${e.target.id}.jpg')`;
+      boxImage.style.backgroundImage = `url('../assets/Roupas/${e.target.id}.jpg')`;
     });
   });
 });
