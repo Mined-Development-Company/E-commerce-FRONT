@@ -126,15 +126,22 @@ document.querySelector('#form_login').addEventListener('submit', async (event) =
   event.stopPropagation()
   let errorForm = false
   let errorCredenciais = false
+  let dataValueEmail = localStorage.getItem('email')
+  let dataValueSenha = localStorage.getItem('senha')
+
+  if (!!!dataValueEmail && !!!dataValueSenha) {
+    senhaInput.value = ''
+    emailInput.value = ''
+    return alert('Você não possui cadastro!')
+  }
 
   if (senhaInput.value.trim() != '') {
     let senhaDigitada = await hashSenha(senhaInput.value)
 
-    if (senhaDigitada !== localStorage.getItem('senha'))
+    if (senhaDigitada !== dataValueSenha)
       errorCredenciais = true
   }
 
-  let dataValueEmail = localStorage.getItem('email')
   if (emailInput.value.trim() != '' && validateEmail(emailInput.value)) {
     if (dataValueEmail !== emailInput.value)
       errorCredenciais = true
@@ -229,4 +236,8 @@ function deslogar() {
 window.onload = () => {
   if (Boolean(localStorage.getItem('authCompleted')))
     manipulaçãoDeAuth()
+}
+
+window.unload = () => {
+  this.localStorage.clear()
 }
