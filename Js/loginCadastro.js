@@ -27,6 +27,8 @@ let senhaInput = document.querySelector('#auth_login #senha')
 let emailInput = document.querySelector('#auth_login #email')
 
 // cadastro
+let user_data = JSON.parse(localStorage.getItem('user_data')) || {}
+let data_senha = localStorage.getItem('senha')
 let inputsCadastro = document.querySelectorAll('#auth_cadastro input')
 let selectGenero = document.querySelector('#auth_cadastro #genero')
 let selectIdade = document.querySelector('#auth_cadastro #idade')
@@ -88,7 +90,7 @@ function validateEmail(mail) {
     return true
 
   alert('Por favor, digite um email válido!')
-  localStorage.removeItem('email')
+  if (!Boolean(localStorage.getItem('authCompleted'))) delete user_data.email
   return false
 }
 
@@ -104,20 +106,12 @@ async function hashSenha(value) {
   }
 }
 
-function todosValoresSaoIguais(array) {
-  return array === 1
-}
-
-function confirmarSenha(value) {
-  return value === localStorage.getItem('senha')
-}
-
-function manipulaçãoDeAuth() {
+function manipulacaoDeAuth() {
   authProjectLabel.innerText = 'Olá, seja bem-vindo'
   authProjectBtnSair.classList.add('deslogar')
   authProjectBtnSair.innerText = 'Sair'
   authProjectNomeUsuario.classList.add('limite_de_caracteres')
-  authProjectNomeUsuario.innerText = localStorage.getItem('nome_usuario')
+  authProjectNomeUsuario.innerText = user_data.nome
   authProjectContainer.removeChild(authProjectBtnLoginCadastro)
 }
 
@@ -126,10 +120,8 @@ document.querySelector('#form_login').addEventListener('submit', async (event) =
   event.stopPropagation()
   let errorForm = false
   let errorCredenciais = false
-  let dataValueEmail = localStorage.getItem('email')
-  let dataValueSenha = localStorage.getItem('senha')
 
-  if (!!!dataValueEmail && !!!dataValueSenha) {
+  if (!user_data.email && !data_senha) {
     senhaInput.value = ''
     emailInput.value = ''
     return alert('Você não possui cadastro!')
@@ -137,13 +129,12 @@ document.querySelector('#form_login').addEventListener('submit', async (event) =
 
   if (senhaInput.value.trim() != '') {
     let senhaDigitada = await hashSenha(senhaInput.value)
-
-    if (senhaDigitada !== dataValueSenha)
+    if (senhaDigitada !== data_senha)
       errorCredenciais = true
   }
 
   if (emailInput.value.trim() != '' && validateEmail(emailInput.value)) {
-    if (dataValueEmail !== emailInput.value)
+    if (user_data.email !== emailInput.value)
       errorCredenciais = true
   }
 
@@ -163,12 +154,12 @@ document.querySelector('#form_login').addEventListener('submit', async (event) =
 
   if (!errorCredenciais) {
     localStorage.setItem('authCompleted', true)
-    manipulaçãoDeAuth()
+    manipulacaoDeAuth()
     fecharModais()
   }
 })
 
-function Cadastrando(event) {
+function cadastro(event) {
   let errorForm = false
 
   inputsCadastro.forEach(async (element, index) => {
@@ -182,17 +173,17 @@ function Cadastrando(event) {
 
     switch (elementInput.id) {
       case 'nome':
-        localStorage.setItem('nome_usuario', elementInput.value)
+        user_data.nome = elementInput.value
         break
       case 'email':
         if (validateEmail(elementInput.value)) {
-          localStorage.setItem('email', elementInput.value)
+          user_data.email = elementInput.value
           break;
         }
         break
       case 'senha':
-        let senha = await hashSenha(elementInput.value)
-        localStorage.setItem('senha', senha)
+        let has_senha = await hashSenha(elementInput.value)
+        localStorage.setItem('senha', has_senha)
         break
       default:
         break
@@ -203,9 +194,8 @@ function Cadastrando(event) {
       return
     }
   })
-
-  localStorage.setItem('genero', selectGenero.value)
-  localStorage.setItem('idade', selectIdade.value)
+  user_data.genero = selectGenero.value
+  user_data.idade = selectIdade.value
 
   if (errorForm) {
     localStorage.clear()
@@ -214,13 +204,14 @@ function Cadastrando(event) {
   }
 
   if (!errorForm) {
+    localStorage.setItem('user_data', JSON.stringify(user_data))
     goBackLogin()
     return
   }
 }
 
 function finalizarNovoCadastro() {
-  Cadastrando()
+  cadastro()
 }
 
 function goBackLogin() {
@@ -235,7 +226,7 @@ function deslogar() {
 
 window.onload = () => {
   if (Boolean(localStorage.getItem('authCompleted')))
-    manipulaçãoDeAuth()
+    manipulacaoDeAuth()
 }
 
 window.unload = () => {
