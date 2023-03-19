@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.box__conteudo__body {
+  width: 100%;
+  padding: 36px 100px;
+  outline: 1px solid #c8c8c8;
+  display: flex;
+  gap: 69px;
+}
+/* conteudo da caixa meu carrinho */
+.box__meu__carrinho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* guia da pagina */
+.guia__da__pagina {
+  width: 600px;
+  height: 50px;
+  margin-bottom: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.guia__da__pagina ul {
+  display: flex;
+  list-style-type: none;
+}
+.guia__da__pagina li {
+  margin: 0px 28px;
+  font-family: "Nunito";
+}
+.guia__da__pagina li {
+  color: #c8c8c8;
+}
+ul .primeiro__li {
+  color: black;
+  font-weight: 600;
+}
+.box__img {
+  display: flex;
+}
+/* Meu carrinho */
+.meu__carrinho {
+  outline: 1px solid #c8c8c8;
+  width: 734px;
+  height: 247px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.064);
+}
+.meu__carrinho h1 {
+  padding: 20px;
+  outline: 1px solid #c8c8c8;
+}
+.carrinho__infomações {
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+  padding: 9px 35px;
+  font-family: "Nunito";
+}
+.conteudo_meu__carrinho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 30px;
+}
+.box__dinheiro__lixeira {
+  gap: 10px;
+}
+.imagem__do__produto {
+  width: 55px;
+  height: 77px;
+  border-radius: 6px;
+  display: flex;
+  object-fit: contain;
+}
+.informações__de__itens {
+  width: 300px;
+  display: flex;
+}
+.informações__de__conteudo {
+  display: flex;
+}
+.item__laranja__e__p {
+  display: flex;
+  margin-right: 65px;
+  margin-left: 28px;
+  gap: 32px;
+}
+.informações__de__conteudo p {
+  font-family: "PT Sans";
+  outline: 1px solid #c8c8c8;
+  padding: 0px 4px;
+  height: 20px;
+  text-align: center;
+}
+.informações__de__conteudo button {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(165, 42, 42, 0);
+  border: none;
+  border-left: 1px solid #c8c8c8;
+  border-right: 1px solid #c8c8c8;
+}
+.box__dinheiro__lixeira {
+  display: flex;
+  align-items: center;
+}
+.quantide__de__itens {
+  outline: 1px solid #c8c8c8;
+}

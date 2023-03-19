@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.resumo__da__compra {
+  margin: 83px 0px;
+  width: 367px;
+  height: 407px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff0da;
+  box-shadow: 0px 0px 8px 0px #00000026;
+}
+.resumo__da__compra h1 {
+  color: rgb(0, 0, 0);
+  margin-top: 15px;
+  font-weight: bold;
+}
+.subtotal {
+  font-family: "Nunito";
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.caixa__dos__inputs {
+  width: 100%;
+  display: flex;
+  font-family: "PT Sans";
+  font-weight: 700;
+  flex-direction: column;
+  padding: 0px 20px;
+  padding-right: 15px;
+  margin-bottom: 28px;
+}
+.input__button {
+  display: flex;
+  justify-content: space-between;
+}
+label {
+  margin-bottom: 9px;
+}
+input {
+  width: 200px;
+  height: 28px;
+  padding: 14px;
+}
+.button {
+  width: 83px;
+  height: 31px;
+  background-color: #ff9900;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+}
+.button__continuar__comprando {
+  padding: 8px 22px;
+  background-color: #1eb12d;
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.05rem;
+}
