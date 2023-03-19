@@ -94,6 +94,7 @@ main {
   border-radius: 10px;
   padding: 5px 10px;
   transition: background-color 0.25s ease;
+  cursor: pointer;
 }
 
 .sizes > button:hover {
@@ -116,7 +117,9 @@ main {
 .colors label {
   display: none;
 }
-
+.colors input {
+  cursor: pointer;
+}
 .colors > input[type="radio"]:after {
   width: 15px;
   height: 15px;
@@ -201,6 +204,11 @@ main {
   background-color: transparent;
   border: var(--laranja) solid 1px;
   border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.buttons button:hover {
+  scale: 102%;
 }
 
 .buttons > .comprar {
@@ -208,6 +216,7 @@ main {
   border: var(--laranja) solid 1px;
   font-weight: bold;
   transition: background-color 1s ease, color 0.2s ease;
+  transition: all 0.5s;
 }
 
 .buttons .add_carinho:hover {
