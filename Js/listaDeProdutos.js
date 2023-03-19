@@ -1,11 +1,11 @@
 let boxRoupas = document.querySelectorAll(".boxRoupas");
 
 boxRoupas.forEach((element, index) => {
-  const boxImage = element.querySelector(".boxImage");
+  const boxImage = element.querySelector(".boxImage img");
   const inputs = element.querySelectorAll('.boxInput input[type="radio"]');
-  inputs.forEach(element => {
-    element.addEventListener("click", e => {
-      boxImage.style.backgroundImage = `url('../assets/Roupas/${e.target.id}.jpg')`;
+  inputs.forEach(e => {
+    e.addEventListener("click", evt => {
+      boxImage.src = `../assets/Roupas/${evt.target.id}.jpg`;
     });
   });
 });
