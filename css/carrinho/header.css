@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 100px;
+  border-bottom: 1px solid rgb(220, 220, 220);
+}
+.box__logo {
+  width: 180px;
+  height: 71px;
+  display: flex;
+}
+h1 {
+  font-weight: 400;
+  font-family: "Nunito";
+  color: rgb(199, 197, 197);
+}
+a {
+  text-decoration: none;
+}

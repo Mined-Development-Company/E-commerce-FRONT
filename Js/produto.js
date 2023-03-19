@@ -35,3 +35,15 @@ function btnClick(e) {
     }
   });
 }
+
+//
+
+const tamanho__da__roupas = document.querySelectorAll(".sizes button");
+tamanho__da__roupas.forEach(element => {
+  element.addEventListener("click", e => {
+    tamanho__da__roupas.forEach(evt => {
+      evt.style.background = "transparent";
+    });
+    e.target.style.background = "var(--laranja)";
+  });
+});
