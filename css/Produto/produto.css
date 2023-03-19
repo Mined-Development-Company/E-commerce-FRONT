@@ -131,7 +131,7 @@ main {
   border: 2px solid white;
 }
 
-.colors > input[type="radio"]#roxo:checked:after {
+.colors > input[type="radio"]#rosa:checked:after {
   width: 15px;
   height: 15px;
   border-radius: 15px;
@@ -181,6 +181,20 @@ main {
   left: -1px;
   position: relative;
   background-color: #113f0c;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+.colors > input[type="radio"]#verdeClaro:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #96ac97;
   content: "";
   display: inline-block;
   visibility: visible;
