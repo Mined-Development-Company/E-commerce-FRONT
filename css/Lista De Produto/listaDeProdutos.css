@@ -56,6 +56,13 @@ main {
   width: 204px;
   margin: 16px 23px;
 }
+.boxFiltro li {
+  cursor: pointer;
+}
+
+.boxFiltro li[data-selected="true"]{
+  font-weight: bold;
+}
 #roupas {
   width: 974px;
   height: 981px;
