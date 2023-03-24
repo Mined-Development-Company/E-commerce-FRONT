@@ -1,0 +1,64 @@
+/* roupas */
+#roupas {
+  width: 974px;
+  height: 981px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 41px;
+
+  margin: 23px 0px 44px 0px;
+  padding: 20px;
+
+  background-color: var(--laranja-claro);
+
+  border: 1px solid var(--cinza);
+
+  border-radius: 5px;
+}
+#roupas h1 {
+  font-size: 13px;
+  font-family: var(--font_pt_sans);
+  font-weight: 300;
+}
+#roupas p {
+  font-size: 13px;
+  font-family: var(--font_pt_sans);
+  font-weight: 700;
+  margin: 7px;
+}
+.boxConteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.boxRoupas {
+  width: 270px;
+  height: 440px;
+
+  display: flex;
+  flex-direction: column;
+}
+.boxImage {
+  background-image: var(--image);
+  width: 270px;
+  height: 364px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+/* cores de input */
+#roupas input:hover {
+  cursor: pointer;
+}
+.corRoupa {
+  appearance: none;
+  content: ".";
+  width: 13px;
+  height: 13px;
+  background-color: var(--corDaRoupa);
+  border: 1px solid var(--preto-cinza);
+  border-radius: 100px;
+}
+/* cores de input */

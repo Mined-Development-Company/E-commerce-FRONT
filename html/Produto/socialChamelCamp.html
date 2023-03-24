@@ -18,19 +18,10 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../../style.css" />
-
-    <link rel="stylesheet" href="../../css/header/header.css" />
-    <link rel="stylesheet" href="../../css/header/header-media.css" />
-    <link rel="stylesheet" href="../../css/header/header-search.css" />
-    <link rel="stylesheet" href="../../css/header/menu-categorias.css" />
-    <link rel="stylesheet" href="../../css/header/menu-itens.css" />
-    <link rel="stylesheet" href="../../css/header/nav.css" />
-    <link rel="stylesheet" href="../../css/header/login.css" />
-    <link rel="stylesheet" href="../../css/Produto/produto.css" />
-
+    <link rel="stylesheet" href="../../css/stilos/Header.css"/>
+    <link rel="stylesheet" href="../../css/Produto/produto.css"/>
     <link rel="stylesheet" href="../../css/footer/footer.css" />
-    <link rel="stylesheet" href="../../css/variaveis.css" />
+    <link rel="stylesheet" href="../../css/stilos/bases.css" />
 
     <!-- Icons -->
     <link
@@ -154,6 +145,8 @@
       </main>
     </div>
     <!-- Final Modal login e cadastro -->
+
+    <!-- Inicio header -->
     <nav>
       <h1 class="nav__titulo">Mineração revolucionando a moda Brasileira!</h1>
 
@@ -191,13 +184,13 @@
           </ul>
         </section>
         <section class="menu__categorias">
-          <li class="option"><a href="../html/listaDeProdutos.html">Feminino</a></li>
+          <li class="option"><a href="../../html/listaDeProdutos.html">Feminino</a></li>
           <li class="menu__itens">
             <ul class="menu__categorias">
-              <li><a href="../html/listaDeProdutos.html">Saias</a> </li>
-              <li><a href="../html/listaDeProdutos.html">Shorts</a> </li>
-              <li><a href="../html/listaDeProdutos.html">Calças</a> </li>
-              <li><a href="../html/listaDeProdutos.html">Calçados</a> </li>
+              <li><a href="../../html/listaDeProdutos.html">Saias</a> </li>
+              <li><a href="../../html/listaDeProdutos.html">Shorts</a> </li>
+              <li><a href="../../html/listaDeProdutos.html">Calças</a> </li>
+              <li><a href="../../html/listaDeProdutos.html">Calçados</a> </li>
             </ul>
           </li>
         </section>
@@ -241,8 +234,8 @@
         <section class="user_area">
           <div class="pipe"></div>
           <div class="perfil">
-            <img src="../../assets/header/avartar.svg" alt="o ultimo mestre do ar" />
             <a href="../../html/carrinho.html"><img src="../../assets/header/cart.svg" alt="carrinho" /></a>
+            <img src="../../assets/header/avartar.svg" alt="o ultimo mestre do ar" />
             <div id="auth_project" class="Login">
               <label for="Login">Olá, faça seu</label>
               <div class="autenticado">
@@ -268,7 +261,7 @@
     <main>
       <div class="product">
         <div class="imgs">
-          <div class="product_image">
+          <div class="product__image">
             <img
               src="../../assets/Roupas/socialChamelCampRosa.jpg"
               class="selectedImg"
@@ -276,7 +269,7 @@
             />
             <span><img src="../../assets/produto (favorito)/favorito.svg" alt="favorito" /></span>
           </div>
-          <div class="product_images">
+          <div class="product__images">
             <img
               src="../../assets/Roupas/socialChamelCampRosa.jpg"
               class="rosa"
@@ -302,25 +295,29 @@
         <div class="description">
           <h1>social chamel camp</h1>
           <p>tamanho: <span id="size">escolha um tamanho</span></p>
-          <div class="sizes">
-            <button type="button" id="size-pp">PP</button>
-            <button type="button" id="size-m">M</button>
-            <button type="button" id="size-g">G</button>
-            <button type="button" id="size-gg">GG</button>
+          <div class="sizes__pp">
+            <label for="size__pp">PP</label>
+            <label for="size__m">M</label>
+            <label for="size__g">G</label>
+            <label for="size__gg">GG</label>
+            <input type="checkbox" id="size__pp"></input>
+            <input type="checkbox" id="size__m"></input>
+            <input type="checkbox" id="size__g"></input>
+            <input type="checkbox" id="size__gg"></input>
           </div>
           <p class="price">R$ 69,90</p>
           <div class="colors">
-            <label for="rosa" class="sr-only">rosa</label>
+            <label for="rosa" class="sr__only">rosa</label>
             <input type="radio" name="color" id="rosa" checked />
-            <label for="verdeClaro" class="sr-only">verdeClaro</label>
+            <label for="verdeClaro" class="sr___only">verdeClaro</label>
             <input type="radio" name="color" id="verdeClaro" />
-            <label for="laranja" class="sr-only">laranja</label>
+            <label for="laranja" class="sr__only">laranja</label>
             <input type="radio" name="color" id="laranja" />
-            <label for="verde" class="sr-only">verde</label>
+            <label for="verde" class="sr__only">verde</label>
             <input type="radio" name="color" id="verde" />
           </div>
           <div class="buttons">
-            <button class="add_carrinho">ADICIONE AO CARRINHO</button>
+            <button class="add__carrinho">ADICIONE AO CARRINHO</button>
             <button class="comprar">COMPRAR</button>
           </div>
         </div>
@@ -331,7 +328,7 @@
     <footer>
       <!-- logo e redes (footer)-->
       <div class="footer">
-        <div class="logo-footer">
+        <div class="logo__footer">
           <img src="../../assets/footer/logo-footer.svg" alt="" />
         </div>
         <div class="redes">
