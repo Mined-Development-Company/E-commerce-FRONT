@@ -1,0 +1,34 @@
+/* roupas */
+#filtro {
+  width: 248px;
+  height: 600px;
+  margin: 23px 15px 0px 35px;
+
+  background-color: var(--laranja-claro);
+
+  border: 1px solid var(--cinza);
+  border-radius: 5px;
+}
+#filtro h2 {
+  color: var(--laranja);
+  font-size: 0.999rem;
+  margin: 5px;
+}
+#filtro p {
+  font-family: var(--font_pt_sans);
+  color: var(--preto-cinza);
+}
+#filtro ul {
+  list-style-position: inside;
+}
+.boxFiltro {
+  width: 204px;
+  margin: 16px 23px;
+}
+.boxFiltro li {
+  cursor: pointer;
+}
+
+.boxFiltro li[data-selected="true"] {
+  font-weight: bold;
+}
