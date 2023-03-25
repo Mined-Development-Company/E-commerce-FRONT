@@ -4,11 +4,12 @@ main {
 
 .product {
   margin: 30px 100px;
-  padding: 50px 150px 50px 100px;
+  padding: 118px 37px;
   background-color: var(--laranja-claro);
   display: flex;
-  justify-content: space-between;
+  gap: 164px;
   align-items: flex-start;
+  border-radius: 6px;
 }
 
 .imgs {
@@ -16,8 +17,11 @@ main {
 }
 
 .imgs > .product__image {
-  width: inherit;
-  margin-bottom: 24px;
+  width: 500px;
+  height: 600px;
+
+  display: flex;
+  margin-bottom: 10px;
   border-radius: 6px;
 }
 
@@ -52,6 +56,7 @@ main {
 
 .product__images > img {
   width: 120px;
+  height: 120px;
   border-radius: 6px;
 }
 
@@ -136,7 +141,7 @@ main {
   border: 2px solid white;
 }
 
-.colors > input[type="radio"]#cinza:checked:after {
+.colors > input[type="radio"]#verdeClaro:checked:after {
   width: 15px;
   height: 15px;
   border-radius: 15px;

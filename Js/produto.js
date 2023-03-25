@@ -1,5 +1,5 @@
-const image = document.querySelector(".product_image > img");
-const images = Array.from(document.querySelectorAll(".product_images > img"));
+const image = document.querySelector(".product__image > img");
+const images = Array.from(document.querySelectorAll(".product__images > img"));
 const btns = Array.from(document.querySelectorAll("input[name='color']"));
 
 images.forEach(image => {
@@ -38,7 +38,7 @@ function btnClick(e) {
 
 //
 
-const tamanho__da__roupas = document.querySelectorAll(".sizes button");
+const tamanho__da__roupas = document.querySelectorAll(".sizes input");
 tamanho__da__roupas.forEach(element => {
   element.addEventListener("click", e => {
     tamanho__da__roupas.forEach(evt => {
