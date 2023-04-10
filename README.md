@@ -2,4 +2,4 @@
 
 Enprogresso...
 
-https://github.com/0rogerinho/Projeto-Android
+https://mined-development-company.github.io/E-commerce-FRONT/
