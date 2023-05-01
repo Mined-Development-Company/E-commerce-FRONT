@@ -79,9 +79,10 @@ main {
 
 #size {
   font-weight: bold;
+  color: red;
 }
 
-.sizes > button {
+.sizes > label {
   background-color: transparent;
   border: var(--laranja) solid 1px;
   border-radius: 10px;
@@ -92,6 +93,9 @@ main {
 
 .sizes > button:hover {
   background-color: var(--laranja);
+}
+.sizes input {
+  display: none;
 }
 
 .price {
