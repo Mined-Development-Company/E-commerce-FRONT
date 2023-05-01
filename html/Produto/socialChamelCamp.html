@@ -295,15 +295,15 @@
         <div class="description">
           <h1>social chamel camp</h1>
           <p>tamanho: <span id="size">escolha um tamanho</span></p>
-          <div class="sizes__pp">
+          <div class="sizes">
             <label for="size__pp">PP</label>
             <label for="size__m">M</label>
             <label for="size__g">G</label>
             <label for="size__gg">GG</label>
-            <input type="checkbox" id="size__pp"></input>
-            <input type="checkbox" id="size__m"></input>
-            <input type="checkbox" id="size__g"></input>
-            <input type="checkbox" id="size__gg"></input>
+            <input type="radio" name="tamanho" id="size__pp"></input>
+            <input type="radio" name="tamanho" id="size__m"></input>
+            <input type="radio" name="tamanho" id="size__g"></input>
+            <input type="radio" name="tamanho" id="size__gg"></input>
           </div>
           <p class="price">R$ 69,90</p>
           <div class="colors">
@@ -320,8 +320,8 @@
 
           </div>
           <div class="buttons">
-            <button class="add__carrinho">ADICIONE AO CARRINHO</button>
-            <button class="comprar">COMPRAR</button>
+            <button class="add__carrinho" disabled>ADICIONE AO CARRINHO</button>
+            <button class="comprar" disabled>COMPRAR</button>
           </div>
         </div>
       </div>
